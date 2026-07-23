@@ -10,6 +10,15 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 ### Added
 - Queue unreleased changes here.
 
+## [0.1.1] — 2026-07-23
+
+### Fixed
+- Visual guide: mobile horizontal overflow and oversized text on the agentic-wedge section —
+  pinned `text-size-adjust: 100%` (stops iOS auto-inflating text), added a page-level `overflow-x`
+  guard, and gave the `white-space: pre` code blocks `min-width: 0` + `max-width: 100%` so they
+  scroll inside their own container instead of forcing page-wide horizontal scroll. Runtime pack
+  unchanged.
+
 ## [0.1.0] — 2026-07-23
 
 ### Added
@@ -20,4 +29,5 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
   eval-as-acceptance-criteria — as the differentiator. 15 references, a `handoff.yaml` contract
   into `design`/`architecture`, and activation/traversal/output/compression evals.
 
+[0.1.1]: https://github.com/gabros20/product-skill/releases/tag/v0.1.1
 [0.1.0]: https://github.com/gabros20/product-skill/releases/tag/v0.1.0
