@@ -1,0 +1,15 @@
+.DS_Store
+node_modules/
+.vercel
+.env*
+__pycache__/
+*.pyc
+
+# Remotion AI authoring skills (remotion-dev/skills) are PREPACKED: tracked in
+# .agents/skills/ and symlinked from .claude/skills/ so agents building the site
+# hero find them without installing anything. Refresh with
+# `npx skills add remotion-dev/skills`; scripts/init strips them when --video is
+# not kept. The installer also symlinks into the runtime skills/ dir — those
+# must never ship in the pack, so they stay ignored:
+skills/mediabunny
+skills/remotion-*
