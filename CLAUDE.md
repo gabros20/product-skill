@@ -1,5 +1,6 @@
 # Claude Code repository guide
 
-Read [AGENTS.md](AGENTS.md) for the repository rules and
-[TEMPLATE-CHECKLIST.md](TEMPLATE-CHECKLIST.md) for the ordered release checklist. On a fresh derived
-repository, run `scripts/init` before editing the skill. Run `scripts/check-sync` before release.
+This is the released `product` skill (Digital Product Skills family). Read [AGENTS.md](AGENTS.md)
+for what the skill owns and the maintainer rules. Before any release, run `scripts/check-sync`,
+`scripts/lint-skill`, and `scripts/count-skill-tokens`. The runtime pack is `skills/product/`
+(SKILL.md + `references/`); keep version metadata out of `SKILL.md`.
