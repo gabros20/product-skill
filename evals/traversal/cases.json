@@ -1,8 +1,53 @@
 [
   {
-    "id": "primary-route",
-    "prompt": "TODO: add a request that selects one reference.",
-    "expected_references": ["references/example.md"],
-    "forbidden_references": []
+    "id": "discovery-standalone",
+    "prompt": "We suspect our onboarding drop-off is a real problem but we haven't talked to a single user yet. Help us validate it before we design anything.",
+    "expected_references": ["references/discovery.md"],
+    "forbidden_references": [
+      "references/surface-website.md",
+      "references/surface-app-saas.md",
+      "references/surface-mobile.md",
+      "references/surface-agentic.md",
+      "references/surface-internal.md"
+    ]
+  },
+  {
+    "id": "prd-saas-full",
+    "prompt": "Write a full PRD with acceptance criteria for a usage-based billing feature in our web SaaS product — accounts already exist, this ships to paying customers.",
+    "expected_references": ["references/prd.md", "references/surface-app-saas.md"],
+    "forbidden_references": [
+      "references/surface-mobile.md",
+      "references/surface-agentic.md",
+      "references/surface-website.md",
+      "references/discovery.md"
+    ]
+  },
+  {
+    "id": "prd-agentic",
+    "prompt": "We're shipping an AI agent that files expense reports on its own — write the PRD, including the eval set as acceptance criteria.",
+    "expected_references": ["references/prd.md", "references/surface-agentic.md"],
+    "forbidden_references": [
+      "references/surface-app-saas.md",
+      "references/surface-mobile.md",
+      "references/business-model.md"
+    ]
+  },
+  {
+    "id": "prioritization-backlog",
+    "prompt": "We have 14 backlog candidates with reach/impact/effort estimates — run every applicable prioritization framework and build a Now/Next/Later roadmap.",
+    "expected_references": ["references/prioritization.md"],
+    "forbidden_references": ["references/metrics.md", "references/prd.md", "references/discovery.md"]
+  },
+  {
+    "id": "metrics-north-star",
+    "prompt": "Define a North Star metric and a full metric tree with guardrails for our marketplace product.",
+    "expected_references": ["references/metrics.md"],
+    "forbidden_references": ["references/prioritization.md", "references/prd.md"]
+  },
+  {
+    "id": "business-model-pricing",
+    "prompt": "Model our business and come up with a pricing hypothesis — value metric, willingness-to-pay bands, and tier structure — for the new pro tier.",
+    "expected_references": ["references/business-model.md"],
+    "forbidden_references": ["references/market.md", "references/prd.md"]
   }
 ]

@@ -1,6 +1,6 @@
 # remotion — hero animation
 
-The hero animation for the **__SKILL_NAME__** skill's site. 16:9, 28s, loops.
+The hero animation for the **product** skill's site. 16:9, 28s, loops.
 
 The palette in [`src/theme.ts`](src/theme.ts) mirrors `site/index.html`'s `:root` tokens
 exactly, so the video reads as part of the page in both light and dark.

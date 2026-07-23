@@ -1,7 +1,7 @@
 {
-  "name": "__SKILL_NAME__-remotion",
+  "name": "product-remotion",
   "version": "1.0.0",
-  "description": "Hero animation for the __SKILL_NAME__ skill's site",
+  "description": "Hero animation for the product skill's site",
   "repository": {},
   "license": "UNLICENSED",
   "private": true,

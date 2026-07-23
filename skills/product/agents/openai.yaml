@@ -1,0 +1,6 @@
+interface:
+  display_name: "Product Strategy"
+  short_description: "Product discovery, strategy, and PRDs across product types"
+  default_prompt: "Use $product to turn a rough idea into a validated problem, product strategy, and PRD."
+policy:
+  allow_implicit_invocation: true

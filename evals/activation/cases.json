@@ -1,12 +1,102 @@
 [
   {
-    "id": "positive-explicit",
-    "prompt": "Use $__SKILL_NAME__ to TODO: add a realistic in-scope request.",
+    "id": "positive-discovery",
+    "prompt": "We suspect checkout abandonment is a real problem but haven't talked to a single user yet — help us validate it before anyone designs a fix.",
     "should_trigger": true
   },
   {
-    "id": "negative-near-miss",
-    "prompt": "TODO: add a realistic request owned by the closest neighboring skill.",
+    "id": "positive-strategy",
+    "prompt": "Set the product vision, strategic principles, and a Lean Canvas for our new expense-reporting tool.",
+    "should_trigger": true
+  },
+  {
+    "id": "positive-positioning",
+    "prompt": "Define our value proposition and positioning statement against Ramp and Brex for the mid-market segment.",
+    "should_trigger": true
+  },
+  {
+    "id": "positive-business-model",
+    "prompt": "Model our business and come up with a pricing hypothesis — value metric, willingness-to-pay bands, tier structure — for the new pro tier.",
+    "should_trigger": true
+  },
+  {
+    "id": "positive-market-sizing",
+    "prompt": "Size the TAM/SAM/SOM for AI-powered code-review tools in North America and profile our top three competitors.",
+    "should_trigger": true
+  },
+  {
+    "id": "positive-prd",
+    "prompt": "Write a full PRD with Given/When/Then acceptance criteria for the new bulk-export feature.",
+    "should_trigger": true
+  },
+  {
+    "id": "positive-prioritization",
+    "prompt": "We have 12 backlog items with rough reach/impact/effort estimates — run RICE and ICE and build us a Now/Next/Later roadmap.",
+    "should_trigger": true
+  },
+  {
+    "id": "positive-metrics",
+    "prompt": "Define a North Star metric and a full metric tree with guardrails for our marketplace product.",
+    "should_trigger": true
+  },
+  {
+    "id": "positive-risk-register",
+    "prompt": "Start a living risk register for our assumptions before we commit engineering time to this idea.",
+    "should_trigger": true
+  },
+  {
+    "id": "positive-agentic",
+    "prompt": "We're building an AI agent that files expense reports on its own — help scope the PRD, including the eval set as acceptance criteria.",
+    "should_trigger": true
+  },
+  {
+    "id": "positive-saas",
+    "prompt": "Write a PRD for a usage-based billing add-on to our web SaaS product, including the activation and retention metrics it should move.",
+    "should_trigger": true
+  },
+  {
+    "id": "positive-mobile",
+    "prompt": "We're planning a mobile loyalty app — help frame the discovery and PRD around store context and notification-triggered sessions.",
+    "should_trigger": true
+  },
+  {
+    "id": "negative-near-miss-design",
+    "prompt": "Design the onboarding screens and visual style for our new mobile app.",
+    "should_trigger": false
+  },
+  {
+    "id": "negative-near-miss-frontend",
+    "prompt": "Implement the checkout flow in React with Stripe Elements.",
+    "should_trigger": false
+  },
+  {
+    "id": "negative-near-miss-architecture",
+    "prompt": "Help us choose between Postgres and DynamoDB for the new order service and sketch the schema.",
+    "should_trigger": false
+  },
+  {
+    "id": "negative-near-miss-marketing",
+    "prompt": "Write the launch campaign copy and email sequence for our Black Friday sale.",
+    "should_trigger": false
+  },
+  {
+    "id": "negative-near-miss-growth",
+    "prompt": "Set up an A/B test on the signup funnel to improve activation conversion.",
+    "should_trigger": false
+  },
+  {
+    "id": "negative-unrelated-bugfix",
+    "prompt": "Fix the null-pointer exception being thrown in this Python parsing script.",
+    "should_trigger": false
+  },
+  {
+    "id": "negative-unrelated-testing",
+    "prompt": "Write unit tests for the authentication middleware.",
+    "should_trigger": false
+  },
+  {
+    "id": "negative-unrelated-devops",
+    "prompt": "Set up a CI/CD pipeline on GitHub Actions for this repository.",
     "should_trigger": false
   }
 ]

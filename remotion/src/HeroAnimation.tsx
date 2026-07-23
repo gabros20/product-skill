@@ -32,7 +32,7 @@ export const HeroAnimation: React.FC<{ theme: ThemeName }> = ({ theme }) => {
           }}
         >
           <span style={{ color: t.accent }}>/</span>
-          __SKILL_TITLE__
+          Product Strategy
         </div>
       </AbsoluteFill>
     </AbsoluteFill>

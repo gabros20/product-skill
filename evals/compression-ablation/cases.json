@@ -1,7 +1,25 @@
 [
   {
-    "id": "representative-ablation",
-    "prompt": "TODO: add a request that exercises a load-bearing instruction.",
+    "id": "retains-routing-discipline",
+    "prompt": "Write a PRD for a new onboarding flow in our mobile app.",
+    "variants": ["no-skill", "current", "compressed-candidate"],
+    "preserve": ["task success", "safety", "artifact completeness", "required-reference recall"]
+  },
+  {
+    "id": "retains-evidence-labeling",
+    "prompt": "Give us a market sizing and business case for expanding our product into the EU.",
+    "variants": ["no-skill", "current", "compressed-candidate"],
+    "preserve": ["task success", "safety", "artifact completeness", "required-reference recall"]
+  },
+  {
+    "id": "retains-multi-engine-prioritization",
+    "prompt": "Rank our 8 backlog items and build a roadmap.",
+    "variants": ["no-skill", "current", "compressed-candidate"],
+    "preserve": ["task success", "safety", "artifact completeness", "required-reference recall"]
+  },
+  {
+    "id": "retains-completion-handoff",
+    "prompt": "Produce a PRD for our new feature and hand it off to design and engineering.",
     "variants": ["no-skill", "current", "compressed-candidate"],
     "preserve": ["task success", "safety", "artifact completeness", "required-reference recall"]
   }

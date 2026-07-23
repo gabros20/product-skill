@@ -1,10 +1,66 @@
 [
   {
-    "id": "primary-artifact",
-    "prompt": "TODO: add a representative execution request.",
+    "id": "prd-scope-and-acceptance",
+    "prompt": "Write a full PRD for a new saved-search feature in our SaaS product.",
     "assertions": [
-      "TODO: name an observable artifact requirement",
-      "TODO: name an objective validation or completion requirement"
+      "States scope explicitly as in/out/future, not just a feature description",
+      "Acceptance criteria are written as Given/When/Then across happy, edge, error, and non-functional cases",
+      "Distinguishes facts, inferences, and assumptions rather than asserting all claims as fact",
+      "Names the target segment and the objective the feature serves",
+      "Lists open questions with an owner rather than leaving them implicit"
+    ]
+  },
+  {
+    "id": "market-sizing-range",
+    "prompt": "Size the TAM/SAM/SOM for our AI code-review tool in the US mid-market segment.",
+    "assertions": [
+      "TAM/SAM/SOM are each presented as a range, never a single point estimate",
+      "Each figure carries a source-calibrated confidence tier",
+      "At least two sizing methods are used (e.g. top-down and bottom-up), or the single-method limitation is stated explicitly",
+      "TAM is not used as a stand-in for achievable revenue — revenue projections derive from SOM",
+      "Named sources or an explicit 'no source available' statement backs every figure"
+    ]
+  },
+  {
+    "id": "prioritization-divergence",
+    "prompt": "Rank these 10 backlog candidates and give us a roadmap.",
+    "assertions": [
+      "More than one applicable prioritization framework is actually run against the candidate list, not just one",
+      "An agreement/divergence comparison across frameworks is reported as a finding, not collapsed into a single ranked list",
+      "Where frameworks disagree, the named driver behind the divergence is stated for each divergent item",
+      "Missing inputs are flagged rather than silently fabricated to force a score",
+      "Produces a Now/Next/Later outcome roadmap, not just a raw score table"
+    ]
+  },
+  {
+    "id": "agentic-eval-as-acceptance",
+    "prompt": "Write the PRD for our AI agent that auto-drafts customer support replies before a human sends them.",
+    "assertions": [
+      "An eval set is defined and registered as the PRD's acceptance criteria, not left as a separate implementation detail",
+      "Capability and failure modes are mapped per job the agent performs",
+      "A human-in-the-loop autonomy decision (e.g. draft-only vs auto-send) with an escalation path is stated",
+      "Non-determinism, latency, cost, and safety are named as product risks, not omitted",
+      "States the model-choice hypothesis and its rationale"
+    ]
+  },
+  {
+    "id": "metrics-tree-guardrails",
+    "prompt": "Define our North Star metric and a full metric tree for the product.",
+    "assertions": [
+      "A single North Star metric is named, not a bundle of equally-weighted metrics",
+      "The tree decomposes into input, health, and counter-metrics across the stated four layers",
+      "Every optimized metric is paired with a counter-metric guardrail",
+      "The North Star and any OKRs are stated as a number, a %, or a named segment — never an unquantified superlative"
+    ]
+  },
+  {
+    "id": "discovery-evidence-labeling",
+    "prompt": "Help us validate whether checkout abandonment is a real problem before we design a fix.",
+    "assertions": [
+      "Every claim is tagged Fact, Inference, or Assumption rather than presented uniformly as truth",
+      "Assumptions are routed to the risk register rather than fabricated into a fact",
+      "Produces a validated-problem statement and an Opportunity Solution Tree, not a jump straight to a solution",
+      "States what evidence exists versus what remains to be gathered"
     ]
   }
 ]

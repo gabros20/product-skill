@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://__REPO_NAME__.vercel.app/sitemap.xml
+Sitemap: https://product-skill.vercel.app/sitemap.xml

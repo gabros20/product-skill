@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to **__SKILL_NAME__** are documented here.
+All notable changes to **product** are documented here.
 
 The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, git tag
 `v<version>`, and the matching GitHub Release. Runtime `SKILL.md` contains no version metadata.
@@ -10,9 +10,14 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 ### Added
 - Queue unreleased changes here.
 
-## [1.0.0] — TODO-date
+## [0.1.0] — 2026-07-23
 
 ### Added
-- Initial release: TODO.
+- Initial release of the `product` skill — the Discover/Strategy stage of the Digital Product
+  Skills family. A faceted router over 9 primary jobs (discovery, strategy, positioning,
+  business-model, market, prd, prioritization, metrics, risk-register) and 5 product-type surface
+  overlays (website, app-saas, mobile, agentic, internal), with the agentic/AI-product overlay —
+  eval-as-acceptance-criteria — as the differentiator. 15 references, a `handoff.yaml` contract
+  into `design`/`architecture`, and activation/traversal/output/compression evals.
 
-[1.0.0]: https://github.com/gabros20/__REPO_NAME__/releases/tag/v1.0.0
+[0.1.0]: https://github.com/gabros20/product-skill/releases/tag/v0.1.0
