@@ -1,20 +1,21 @@
 <!doctype html>
-<!-- skill-site scaffold: shared family chrome; identity = the accent triple PLUS sections, components, and a hero designed for THIS skill. Read site/README.md (the design brief) before editing — filling the TODOs is not a site. Keep the hero-terminal and Start-here shapes. -->
+<!-- product skill · visual guide. Shared family chrome (tokens, type, hero-terminal, footer);
+     identity = emerald accent + sections/diagrams/hero designed for THIS skill's faceted router. -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f7fa">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#12151d">
-<title>product — Decide what to build, for whom, and why — discovery, strategy, and PRD across any product type.</title>
-<meta name="description" content="TODO — one to two sentence description of the skill for search engines.">
+<title>product — Decide what to build, for whom, and why · discovery, strategy & PRDs for any product type</title>
+<meta name="description" content="A faceted agent skill for product decisions: opportunity discovery, strategy, positioning, business model, market sizing, PRDs and acceptance criteria, prioritization, success metrics, and a living risk register — grounded in the PM canon, with agentic eval-as-acceptance-criteria as a first-class surface.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://product-skill.vercel.app/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="product — Decide what to build, for whom, and why — discovery, strategy, and PRD across any product type.">
-<meta property="og:description" content="TODO — one to two sentence description for social previews.">
+<meta property="og:title" content="product — decide what to build, for whom, and why">
+<meta property="og:description" content="A faceted agent skill for the front of the product lifecycle: discovery, strategy, positioning, PRDs, prioritization, metrics, and risk — grounded in the PM canon, with agentic eval-as-acceptance-criteria first-class.">
 <meta property="og:url" content="https://product-skill.vercel.app/">
 <meta property="og:image" content="https://product-skill.vercel.app/og.png">
 <meta property="og:image:width" content="1200">
@@ -22,8 +23,8 @@
 <meta property="og:site_name" content="product">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="product — Decide what to build, for whom, and why — discovery, strategy, and PRD across any product type.">
-<meta name="twitter:description" content="TODO — one to two sentence description for social previews.">
+<meta name="twitter:title" content="product — decide what to build, for whom, and why">
+<meta name="twitter:description" content="A faceted agent skill for the front of the product lifecycle: discovery, strategy, positioning, PRDs, prioritization, metrics, risk — grounded in the PM canon, agentic-first.">
 <meta name="twitter:image" content="https://product-skill.vercel.app/og.png">
 
 <script type="application/ld+json">
@@ -31,9 +32,9 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "product",
-  "applicationCategory": "DesignApplication",
+  "applicationCategory": "DeveloperApplication",
   "operatingSystem": "Claude Code / agent CLIs",
-  "description": "TODO — one to two sentence description of the skill.",
+  "description": "A faceted agent skill for the front of the product lifecycle — discovery, strategy, positioning, business model, market sizing, PRDs and acceptance criteria, prioritization, success metrics, and a living risk register — grounded in the named PM canon, with agentic eval-as-acceptance-criteria as a first-class surface.",
   "url": "https://product-skill.vercel.app/",
   "offers": {
     "@type": "Offer",
@@ -51,24 +52,28 @@
     --accent:#059669; --accent-ink:#ffffff; --amber:#a97a10; --amber-bg:#fdf6e3;
     --good:#1e7f4f; --bad:#b3403a; --code-bg:#eef1f7; --glyph:#8391ad;
     --tok-strat:#059669; --tok-dim:#8146c9; --tok-val:#1e7f4f; --tok-file:#a97a10;
+    --dim-bg:rgba(129,70,201,.08);
   }
   @media (prefers-color-scheme: dark){ :root{
     --bg:#12151d; --panel:#1a1f2b; --ink:#e6eaf3; --muted:#93a0b8; --line:#2b3245;
     --accent:#34d399; --accent-ink:#0d1220; --amber:#d9a72e; --amber-bg:#26200f;
     --good:#4cc38a; --bad:#e5726c; --code-bg:#141824; --glyph:#5d6a85;
     --tok-strat:#34d399; --tok-dim:#b98aef; --tok-val:#4cc38a; --tok-file:#d9a72e;
+    --dim-bg:rgba(185,138,239,.13);
   }}
   :root[data-theme="dark"]{
     --bg:#12151d; --panel:#1a1f2b; --ink:#e6eaf3; --muted:#93a0b8; --line:#2b3245;
     --accent:#34d399; --accent-ink:#0d1220; --amber:#d9a72e; --amber-bg:#26200f;
     --good:#4cc38a; --bad:#e5726c; --code-bg:#141824; --glyph:#5d6a85;
     --tok-strat:#34d399; --tok-dim:#b98aef; --tok-val:#4cc38a; --tok-file:#d9a72e;
+    --dim-bg:rgba(185,138,239,.13);
   }
   :root[data-theme="light"]{
     --bg:#f6f7fa; --panel:#ffffff; --ink:#1c2333; --muted:#5a6478; --line:#d8dde8;
     --accent:#059669; --accent-ink:#ffffff; --amber:#a97a10; --amber-bg:#fdf6e3;
     --good:#1e7f4f; --bad:#b3403a; --code-bg:#eef1f7; --glyph:#8391ad;
     --tok-strat:#059669; --tok-dim:#8146c9; --tok-val:#1e7f4f; --tok-file:#a97a10;
+    --dim-bg:rgba(129,70,201,.08);
   }
   *{box-sizing:border-box}
   body{background:var(--bg); color:var(--ink); font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif; margin:0; -webkit-font-smoothing:antialiased}
@@ -81,7 +86,7 @@
   h2::after{content:""; flex:1; height:1px; background:var(--line)}
   h2 .lu{color:var(--accent); width:20px; height:20px}
   section{margin-top:64px}
-  .lede{font-size:19px; color:var(--muted); max-width:60ch; margin:0}
+  .lede{font-size:19px; color:var(--muted); max-width:62ch; margin:0}
   .hosts{display:flex; flex-wrap:wrap; align-items:center; gap:7px; margin:16px 0 0}
   .hosts .hl{font-family:"Avenir Next Condensed","Arial Narrow",system-ui,sans-serif; text-transform:uppercase; letter-spacing:.14em; font-weight:600; font-size:11px; color:var(--muted); margin-right:2px}
   .hosts span:not(.hl){font-family:ui-monospace,Menlo,monospace; font-size:11.5px; color:var(--muted); background:var(--code-bg); border-radius:5px; padding:3px 8px; white-space:nowrap}
@@ -94,9 +99,12 @@
   .lu{width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:1.75; stroke-linecap:round; stroke-linejoin:round; flex:none; vertical-align:-3px}
 
   /* top nav */
-  nav{display:flex; flex-wrap:wrap; gap:8px; margin-top:26px}
-  nav a{font-family:ui-monospace,Menlo,monospace; font-size:12.5px; text-decoration:none; color:var(--muted); border:1px solid var(--line); border-radius:999px; padding:4px 12px; background:var(--panel)}
-  nav a:hover,nav a:focus-visible{color:var(--accent); border-color:var(--accent); outline:none}
+  nav.toplinks{display:flex; flex-wrap:wrap; gap:8px; margin-top:26px}
+  nav.toplinks a{font-family:ui-monospace,Menlo,monospace; font-size:12.5px; text-decoration:none; color:var(--muted); border:1px solid var(--line); border-radius:999px; padding:4px 12px; background:var(--panel)}
+  nav.toplinks a:hover,nav.toplinks a:focus-visible{color:var(--accent); border-color:var(--accent); outline:none}
+  .secnav{display:flex; flex-wrap:wrap; gap:8px; margin-top:26px}
+  .secnav a{font-family:ui-monospace,Menlo,monospace; font-size:12.5px; text-decoration:none; color:var(--muted); border:1px solid var(--line); border-radius:999px; padding:4px 12px; background:var(--panel)}
+  .secnav a:hover,.secnav a:focus-visible{color:var(--accent); border-color:var(--accent); outline:none}
   .secnav a::before{content:"#"; color:var(--glyph); margin-right:5px}
   .secnav a:hover::before,.secnav a:focus-visible::before{color:var(--accent)}
 
@@ -105,80 +113,142 @@
   .term .c{color:var(--muted)}
   .term .p{color:var(--accent); font-weight:600}
 
-  /* the arc — animated explainer: a Remotion video, light/dark, swapped in
-     as progressive enhancement over the static one-line arc fallback below */
-  .vidwrap{display:none; margin-top:20px}
+  /* the hero — Remotion video (light/dark) over the static router fallback */
+  .vidwrap{display:none; margin-top:22px}
   .vidwrap video{display:block; width:100%; aspect-ratio:16/9; border:1px solid var(--line); border-radius:10px; background:var(--bg); box-shadow:0 30px 70px -40px rgba(0,0,0,.45)}
   body.has-vid .vidwrap{display:block}
-  body.has-vid .poster{display:none}
-  .poster{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:20px; margin-top:20px}
-  .arcline{font-family:ui-monospace,Menlo,monospace; font-size:14.5px; line-height:2; color:var(--muted); margin:0}
-  .arcline b{color:var(--ink); font-weight:600}
-  .arcline .ar{color:var(--glyph); margin:0 2px}
+  body.has-vid .herofallback{display:none}
+
+  /* router fallback / centerpiece — facet composition */
+  .router{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:22px 24px; margin-top:22px}
+  .rlane{display:grid; grid-template-columns:132px 1fr; gap:14px 16px; align-items:center}
+  .rlane + .rlane{margin-top:12px}
+  .rlabel{font-family:"Avenir Next Condensed","Arial Narrow",system-ui,sans-serif; text-transform:uppercase; letter-spacing:.1em; font-weight:600; font-size:12px; color:var(--muted); text-align:right; line-height:1.25}
+  .rlabel small{display:block; font-family:ui-monospace,Menlo,monospace; text-transform:none; letter-spacing:0; font-weight:400; font-size:10.5px; color:var(--glyph)}
+  .chips{display:flex; flex-wrap:wrap; gap:7px}
+  .chip{font-family:ui-monospace,Menlo,monospace; font-size:12.5px; padding:5px 11px; border-radius:8px; white-space:nowrap; color:var(--muted); background:var(--bg); border:1px solid var(--line)}
+  .chip.on{color:var(--accent-ink); background:var(--accent); border-color:var(--accent); font-weight:600}
+  .chip.dimon{color:var(--tok-dim); background:var(--dim-bg); border-color:var(--tok-dim); font-weight:600}
+  .rdown{display:flex; align-items:center; gap:10px; margin:16px 0 14px; color:var(--glyph)}
+  .rdown::before,.rdown::after{content:""; flex:1; height:1px; background:var(--line)}
+  .rdown span{font-family:ui-monospace,Menlo,monospace; font-size:12px; color:var(--muted)}
+  .readset{display:flex; flex-wrap:wrap; gap:9px; align-items:center}
+  .readset code{font-family:ui-monospace,Menlo,monospace; font-size:12.5px; padding:6px 12px; border-radius:8px; color:var(--accent); background:var(--code-bg); border:1px solid var(--accent)}
+  .readset .cnt{font-family:ui-monospace,Menlo,monospace; font-size:12px; color:var(--muted); margin-left:4px}
+  .readset .cnt b{color:var(--ink)}
+  .rrule{margin:16px 0 0; font-size:13.5px; color:var(--muted); display:flex; gap:9px; line-height:1.55}
+  .rrule .lu{color:var(--accent); flex:none; margin-top:1px; width:17px; height:17px}
+  .rrule b{color:var(--ink)}
   .pcap{font-size:13.5px; color:var(--muted); margin:14px 0 0; max-width:68ch}
   .pcap b{color:var(--ink)}
+  @media (max-width:560px){ .rlane{grid-template-columns:1fr; gap:6px} .rlabel{text-align:left} }
 
-  /* numbered stage timeline */
-  .steps{margin-top:20px; counter-reset:step}
-  .steps>div{position:relative; padding:0 0 22px 46px; --sc:var(--accent)}
-  .steps>div::before{counter-increment:step; content:counter(step); position:absolute; left:0; top:-3px; width:28px; height:28px; border-radius:50%; background:var(--panel); border:2px solid var(--sc); color:var(--sc); font-family:ui-monospace,Menlo,monospace; font-size:13px; font-weight:600; display:flex; align-items:center; justify-content:center}
-  .steps>div::after{content:""; position:absolute; left:13px; top:31px; bottom:-6px; width:2px; background:var(--line)}
-  .steps>div:last-child{padding-bottom:0}
-  .steps>div:last-child::after{display:none}
-  .steps b{display:flex; align-items:center; gap:8px; font-family:ui-monospace,Menlo,monospace; font-size:14px; margin:2px 0 4px}
-  .steps b .lu{width:15px; height:15px; color:var(--sc)}
-  .steps span{font-size:13.5px; color:var(--muted); display:block; line-height:1.55; max-width:66ch}
-  .steps span b{display:inline; font-family:inherit; font-size:inherit; color:var(--ink); margin:0; font-weight:600}
-  .steps span code{font-size:12px; background:var(--code-bg); padding:1px 4px; border-radius:4px; overflow-wrap:anywhere}
-
-  /* reference cards, grouped by stage */
-  /* reference map — stage → chips definition list (voids impossible by construction; lighter
-     than the card-heavy neighbouring sections, so it varies the page rhythm) */
-  .refmap{margin-top:20px}
-  .refrow{display:grid; grid-template-columns:200px 1fr; gap:8px 18px; padding:14px 0; align-items:start}
-  .refrow + .refrow{border-top:1px solid var(--line)}
-  .refrow dt, .refrow dd{margin:0}
-  .reflabel{display:flex; align-items:center; gap:8px; font-family:ui-monospace,Menlo,monospace; font-size:14px; letter-spacing:-.01em; color:var(--ink)}
-  .reflabel .lu{color:var(--accent); width:16px; height:16px; flex:none}
-  .reflabel .ct{margin-left:auto; font-size:11px; color:var(--accent); border:1px solid var(--accent); border-radius:999px; padding:1px 8px; font-family:system-ui; flex:none}
-  .refchips{display:flex; flex-wrap:wrap; gap:7px 8px; align-items:baseline}
-  .refchips .ref{display:inline-flex; align-items:baseline; gap:6px}
-  .refchips code{background:var(--code-bg); padding:2px 8px; border-radius:5px; font-size:12px; white-space:nowrap}
-  .refchips .d{font-size:11.5px; color:var(--muted)}
-  @media (max-width:640px){
-    .refrow{grid-template-columns:1fr; gap:9px 0}
-    .reflabel .ct{margin-left:8px}
-  }
+  /* boundary — owns vs hands off */
+  .boundary{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:20px}
+  .bcol{border:1px solid var(--line); border-radius:10px; padding:16px 18px; background:var(--panel)}
+  .bcol.own{border-left:3px solid var(--accent)}
+  .bcol.off{border-left:3px solid var(--glyph)}
+  .bcol h3{font-family:ui-monospace,Menlo,monospace; font-size:13.5px; margin:0 0 4px; display:flex; align-items:center; gap:8px}
+  .bcol.own h3{color:var(--accent)} .bcol.own h3 .lu{color:var(--accent)}
+  .bcol.off h3{color:var(--muted)} .bcol.off h3 .lu{color:var(--glyph)}
+  .bcol .sub{font-size:12.5px; color:var(--muted); margin:0 0 12px}
+  .bitems{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px}
+  .bitems li{font-size:13.5px; line-height:1.4}
+  .bitems li b{font-family:ui-monospace,Menlo,monospace; font-weight:600; font-size:12.5px; color:var(--ink)}
+  .bitems.hand li b{color:var(--tok-dim)}
+  .bitems li .d{color:var(--muted)}
+  .bnote{margin-top:14px; font-size:13.5px; color:var(--muted); display:flex; gap:9px; line-height:1.55}
+  .bnote .lu{color:var(--accent); flex:none; margin-top:1px; width:17px; height:17px}
+  .bnote b{color:var(--ink)}
+  @media (max-width:640px){ .boundary{grid-template-columns:1fr} }
 
   /* tables */
   .tblwrap{overflow-x:auto; border:1px solid var(--line); border-radius:8px; margin-top:20px}
   table{border-collapse:collapse; width:100%; font-size:14px; background:var(--panel)}
   th{font-family:"Avenir Next Condensed","Arial Narrow",system-ui,sans-serif; text-transform:uppercase; letter-spacing:.08em; font-size:12.5px; font-weight:600; text-align:left; color:var(--muted); padding:10px 16px; border-bottom:1px solid var(--line)}
-  td{padding:10px 16px; border-bottom:1px solid var(--line); vertical-align:top}
+  td{padding:11px 16px; border-bottom:1px solid var(--line); vertical-align:top}
   tr:last-child td{border-bottom:none}
   td code{background:var(--code-bg); padding:1px 6px; border-radius:4px; font-size:12.5px; white-space:nowrap}
   td code a{color:inherit; text-decoration:none}
   td code a:hover{text-decoration:underline}
-  td.dim{font-weight:600; font-family:ui-monospace,Menlo,monospace; font-size:13px; color:var(--tok-dim); white-space:nowrap}
-  td .d{color:var(--muted)}
+  td.job{font-weight:600; color:var(--ink); line-height:1.4}
+  td .canon{color:var(--muted); font-size:12.5px; line-height:1.5}
+  td .canon b{color:var(--ink); font-weight:600}
+  td .prod{color:var(--muted); font-size:12.5px}
 
   .note{background:var(--amber-bg); border:1px solid var(--amber); border-radius:8px; padding:12px 16px; font-size:14px; margin-top:16px; max-width:none}
   .note b{color:var(--amber)}
 
-  /* rails — the laws */
+  /* canon chip cloud */
+  .canonband{margin-top:18px; display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:10px}
+  .canongrp{border:1px solid var(--line); border-radius:9px; padding:12px 14px; background:var(--panel)}
+  .canongrp h4{font-family:ui-monospace,Menlo,monospace; font-size:12px; margin:0 0 8px; color:var(--accent); letter-spacing:-.01em}
+  .canongrp .cc{display:flex; flex-wrap:wrap; gap:5px}
+  .canongrp .cc span{font-size:11.5px; color:var(--muted); background:var(--code-bg); border:1px solid var(--line); border-radius:5px; padding:2px 7px; line-height:1.4}
+
+  /* surface overlays */
+  .overlays{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:12px; margin-top:20px}
+  .ov{border:1px solid var(--line); border-radius:10px; padding:15px 17px; background:var(--panel)}
+  .ov.wedge{border-color:var(--accent); box-shadow:0 0 0 1px var(--accent) inset; background:linear-gradient(180deg,color-mix(in srgb,var(--accent) 6%,var(--panel)),var(--panel))}
+  .ov h3{font-family:ui-monospace,Menlo,monospace; font-size:14px; margin:0 0 3px; display:flex; align-items:center; gap:8px; color:var(--ink)}
+  .ov h3 .lu{color:var(--accent); width:16px; height:16px}
+  .ov .file{font-family:ui-monospace,Menlo,monospace; font-size:11px; color:var(--muted); margin-left:auto; font-weight:400}
+  .ov .reshape{font-size:13px; color:var(--muted); margin:6px 0 10px; line-height:1.5}
+  .ov .reshape b{color:var(--ink); font-weight:600}
+  .ov .lens{font-size:12px; color:var(--muted); border-top:1px solid var(--line); padding-top:9px; display:flex; gap:7px}
+  .ov .lens .k{font-family:"Avenir Next Condensed","Arial Narrow",system-ui,sans-serif; text-transform:uppercase; letter-spacing:.08em; font-weight:600; color:var(--accent); flex:none}
+  .ov.wedge .badge{display:inline-block; font-family:"Avenir Next Condensed","Arial Narrow",system-ui,sans-serif; text-transform:uppercase; letter-spacing:.08em; font-weight:600; font-size:10.5px; color:var(--accent-ink); background:var(--accent); border-radius:999px; padding:1px 9px; margin-left:auto}
+
+  /* agentic wedge deep block */
+  .wedgehead{background:var(--accent); color:var(--accent-ink); border-radius:10px 10px 0 0; padding:14px 20px; font-family:ui-monospace,Menlo,monospace; font-size:15px; font-weight:600; display:flex; align-items:center; gap:10px; margin-top:20px}
+  .wedgehead .lu{width:19px; height:19px}
+  .wedgebody{border:1px solid var(--accent); border-top:none; border-radius:0 0 10px 10px; padding:20px; background:var(--panel)}
+  .evalgrid{display:grid; grid-template-columns:1.15fr 1fr; gap:18px}
+  @media (max-width:720px){ .evalgrid{grid-template-columns:1fr} }
+  .evalblock{background:var(--code-bg); border:1px solid var(--line); border-radius:8px; padding:14px 16px; font-family:ui-monospace,Menlo,monospace; font-size:12.5px; line-height:1.75; overflow-x:auto; white-space:pre; margin:0}
+  .evalblock .k{color:var(--tok-dim)}
+  .evalblock .s{color:var(--accent)}
+  .evalblock .c{color:var(--muted)}
+  .wcol h3{font-family:ui-monospace,Menlo,monospace; font-size:13px; margin:0 0 8px; color:var(--ink)}
+  .tierlist,.autlist{list-style:none; padding:0; margin:0 0 16px; display:flex; flex-direction:column; gap:6px}
+  .tierlist li,.autlist li{font-size:12.5px; line-height:1.4; display:flex; gap:9px; align-items:baseline}
+  .tierlist li .t,.autlist li .t{font-family:ui-monospace,Menlo,monospace; font-weight:600; font-size:12px; flex:none; width:104px; color:var(--ink)}
+  .tierlist li .d,.autlist li .d{color:var(--muted)}
+  .tierlist li.good .t{color:var(--good)} .tierlist li.warn .t{color:var(--amber)} .tierlist li.bad .t{color:var(--bad)}
+  .autlist li .t{width:132px; color:var(--accent)}
+  .sharprule{margin-top:18px; background:var(--amber-bg); border:1px solid var(--amber); border-radius:8px; padding:13px 16px; font-size:13.5px; line-height:1.5}
+  .sharprule b{color:var(--amber)}
+  .sharprule .cc{display:flex; flex-wrap:wrap; gap:6px; margin-top:9px}
+  .sharprule .cc span{font-family:ui-monospace,Menlo,monospace; font-size:11.5px; color:var(--muted); background:var(--panel); border:1px solid var(--line); border-radius:5px; padding:2px 8px}
+
+  /* invariants — the laws */
   .rules{list-style:none; padding:0; margin:20px 0 0; display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:12px}
-  .rules li{background:var(--panel); border:1px solid var(--line); border-left:3px solid var(--amber); border-radius:6px; padding:12px 16px; font-size:14px; line-height:1.5}
-  .rules li b{display:flex; align-items:center; gap:7px; font-family:ui-monospace,Menlo,monospace; font-size:13px; margin-bottom:3px}
+  .rules li{background:var(--panel); border:1px solid var(--line); border-left:3px solid var(--amber); border-radius:6px; padding:12px 16px; font-size:13.5px; line-height:1.5}
+  .rules li b{display:flex; align-items:center; gap:7px; font-family:ui-monospace,Menlo,monospace; font-size:13px; margin-bottom:3px; color:var(--ink)}
   .rules li b .lu{width:15px; height:15px; color:var(--amber)}
-  /* if the laws list ends on an orphan cell, make the last item a full-width capstone
-     (title | text) so the wide card reads as a deliberate closing emphasis, not a gap */
   .rules li:last-child{grid-column:1 / -1; display:flex; align-items:baseline; gap:22px}
-  .rules li:last-child b{margin-bottom:0; flex:none; width:230px}
+  .rules li:last-child b{margin-bottom:0; flex:none; width:250px}
   @media (max-width:620px){ .rules li:last-child{flex-direction:column; gap:3px} .rules li:last-child b{width:auto} }
-  .loopback{display:flex; gap:10px; margin-top:12px; font-size:13.5px; color:var(--muted); line-height:1.55; max-width:none}
-  .loopback .ic{color:var(--accent); flex:none; margin-top:1px}
-  .loopback .ic .lu{width:17px; height:17px}
-  .loopback b{color:var(--ink)}
+
+  /* handoff seam */
+  .seam{display:grid; grid-template-columns:1fr auto 1fr; gap:0 18px; align-items:stretch; margin-top:20px}
+  .seambox{border:1px solid var(--line); border-radius:10px; padding:16px 18px; background:var(--panel)}
+  .seambox.mid{border-color:var(--accent); background:var(--code-bg)}
+  .seambox h3{font-family:ui-monospace,Menlo,monospace; font-size:13.5px; margin:0 0 8px; display:flex; align-items:center; gap:8px; color:var(--ink)}
+  .seambox h3 .lu{width:16px; height:16px; color:var(--accent)}
+  .seambox p{font-size:12.5px; color:var(--muted); margin:0; line-height:1.5; max-width:none}
+  .seamyaml{font-family:ui-monospace,Menlo,monospace; font-size:11.5px; line-height:1.7; color:var(--muted); margin:0; white-space:pre; overflow-x:auto}
+  .seamyaml .k{color:var(--tok-dim)} .seamyaml .v{color:var(--ink)} .seamyaml .req{color:var(--accent)}
+  .seamarrows{display:flex; flex-direction:column; justify-content:center; gap:24px; color:var(--accent); font-family:ui-monospace,Menlo,monospace; font-size:22px}
+  .downstream{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+  @media (max-width:760px){
+    .seam{grid-template-columns:1fr; gap:14px}
+    .seamarrows{flex-direction:row; justify-content:center; gap:40px}
+    .seamarrows span{transform:rotate(90deg)}
+  }
+  .seamnote{margin-top:14px; font-size:13.5px; color:var(--muted); display:flex; gap:9px; line-height:1.55}
+  .seamnote .lu{color:var(--accent); flex:none; margin-top:1px; width:17px; height:17px}
+  .seamnote b{color:var(--ink)}
 
   /* details / appendix */
   details.disc{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:0; margin-top:14px}
@@ -196,150 +266,399 @@
   .files .hl{color:var(--accent); font-weight:600}
 
   footer{margin-top:72px; padding-top:20px; border-top:1px solid var(--line); font-size:13px; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px}
-  /* iOS 26 chrome tint: Safari samples fixed edge elements; theme-color alone is ignored */
   .edge{position:fixed; left:0; right:0; height:8px; background:var(--bg); z-index:0; pointer-events:none}
   .edge.top{top:0} .edge.bottom{bottom:0}
-  @media (max-width:720px){
-    .prow{flex-direction:column; align-items:flex-start}
-    .prow .arr{transform:rotate(90deg); margin-left:18px}
-  }
 </style>
 </head>
 <body>
 <div class="edge top" aria-hidden="true"></div>
 <div class="edge bottom" aria-hidden="true"></div>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="lu-file-input" viewBox="0 0 24 24"><path d="M4 11V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-1"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M2 15h10"/><path d="m9 18 3-3-3-3"/></symbol>
-  <symbol id="lu-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
-  <symbol id="lu-scroll-text" viewBox="0 0 24 24"><path d="M15 12h-5"/><path d="M15 8h-5"/><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/></symbol>
-  <symbol id="lu-clipboard-list" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></symbol>
-  <symbol id="lu-clipboard-check" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></symbol>
-  <symbol id="lu-search-check" viewBox="0 0 24 24"><path d="m8 11 2 2 4-4"/><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
-  <symbol id="lu-file-output" viewBox="0 0 24 24"><path d="M4.226 20.925A2 2 0 0 0 6 22h12a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v3.127"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="m5 11-3 3"/><path d="m5 17-3-3h10"/></symbol>
-  <symbol id="lu-files" viewBox="0 0 24 24"><path d="M15 2h-4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8"/><path d="M16.706 2.706A2.4 2.4 0 0 0 15 2v5a1 1 0 0 0 1 1h5a2.4 2.4 0 0 0-.706-1.706z"/><path d="M5 7a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 1.732-1"/></symbol>
-  <symbol id="lu-sliders-horizontal" viewBox="0 0 24 24"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></symbol>
-  <symbol id="lu-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
-  <symbol id="lu-coins" viewBox="0 0 24 24"><path d="M13.744 17.736a6 6 0 1 1-7.48-7.48"/><path d="M15 6h1v4"/><path d="m6.134 14.768.866-.5 2 3.464"/><circle cx="16" cy="8" r="6"/></symbol>
+  <symbol id="lu-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></symbol>
   <symbol id="lu-split" viewBox="0 0 24 24"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3"/><path d="m15 9 6-6"/></symbol>
-  <symbol id="lu-copy-x" viewBox="0 0 24 24"><line x1="12" x2="18" y1="12" y2="18"/><line x1="12" x2="18" y1="18" y2="12"/><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
-  <symbol id="lu-workflow" viewBox="0 0 24 24"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></symbol>
+  <symbol id="lu-search-check" viewBox="0 0 24 24"><path d="m8 11 2 2 4-4"/><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="lu-compass" viewBox="0 0 24 24"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/><circle cx="12" cy="12" r="10"/></symbol>
+  <symbol id="lu-flag" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></symbol>
+  <symbol id="lu-coins" viewBox="0 0 24 24"><path d="M13.744 17.736a6 6 0 1 1-7.48-7.48"/><path d="M15 6h1v4"/><path d="m6.134 14.768.866-.5 2 3.464"/><circle cx="16" cy="8" r="6"/></symbol>
+  <symbol id="lu-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+  <symbol id="lu-scroll-text" viewBox="0 0 24 24"><path d="M15 12h-5"/><path d="M15 8h-5"/><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/></symbol>
+  <symbol id="lu-list-ordered" viewBox="0 0 24 24"><path d="M10 5h11"/><path d="M10 12h11"/><path d="M10 19h11"/><path d="M4 4h1v4"/><path d="M4 8h2"/><path d="M6 16a1.5 1.5 0 1 0-2 1.3c.6.4 2 .7 2 1.7a1.5 1.5 0 0 1-2 1"/></symbol>
+  <symbol id="lu-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
+  <symbol id="lu-shield-alert" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="M12 8v4"/><path d="M12 16h.01"/></symbol>
+  <symbol id="lu-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="lu-bot" viewBox="0 0 24 24"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></symbol>
   <symbol id="lu-layers" viewBox="0 0 24 24"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="m6.08 9.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/><path d="m6.08 14.5-3.5 1.6a1 1 0 0 0 0 1.81l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9a1 1 0 0 0 0-1.83l-3.5-1.59"/></symbol>
-  <symbol id="lu-eye" viewBox="0 0 24 24"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="lu-tag" viewBox="0 0 24 24"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></symbol>
+  <symbol id="lu-sliders-horizontal" viewBox="0 0 24 24"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></symbol>
+  <symbol id="lu-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+  <symbol id="lu-files" viewBox="0 0 24 24"><path d="M15 2h-4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8"/><path d="M16.706 2.706A2.4 2.4 0 0 0 15 2v5a1 1 0 0 0 1 1h5a2.4 2.4 0 0 0-.706-1.706z"/><path d="M5 7a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 1.732-1"/></symbol>
+  <symbol id="lu-git-fork" viewBox="0 0 24 24"><circle cx="12" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><path d="M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9"/><path d="M12 12v3"/></symbol>
+  <symbol id="lu-file-input" viewBox="0 0 24 24"><path d="M4 11V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-1"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M2 15h10"/><path d="m9 18 3-3-3-3"/></symbol>
+  <symbol id="lu-palette" viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2"/></symbol>
+  <symbol id="lu-boxes" viewBox="0 0 24 24"><path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z"/><path d="m7 16.5-4.74-2.85"/><path d="m7 16.5 5-3"/><path d="M7 16.5v5.17"/><path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z"/><path d="m17 16.5-5-3"/><path d="m17 16.5 4.74-2.85"/><path d="M17 16.5v5.17"/><path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z"/><path d="M12 8 7.26 5.15"/><path d="m12 8 4.74-2.85"/><path d="M12 13.5V8"/></symbol>
+  <symbol id="lu-terminal" viewBox="0 0 24 24"><path d="m4 17 6-6-6-6"/><path d="M12 19h8"/></symbol>
 </svg>
 <div class="wrap">
 <header>
-  <div class="eyebrow">TODO: an agent skill · one short descriptor chip</div>
+  <div class="eyebrow">an agent skill · product discovery, strategy &amp; PRDs</div>
   <nav class="toplinks" aria-label="external links">
     <a href="https://github.com/gabros20/product-skill" target="_blank" rel="noopener">GitHub</a>
     <a href="https://github.com/gabros20/product-skill#install" target="_blank" rel="noopener">Install</a>
     <a href="/llms.txt">llms.txt</a>
   </nav>
   <h1><span class="sl">/</span>product</h1>
-  <p class="lede">TODO sentence 1 — the generic, forgettable result an agent produces without this
-  skill. TODO sentence 2 — what product replaces that with, ending on Decide what to build, for whom, and why — discovery, strategy, and PRD across any product type..</p>
-  <div class="term" style="margin-top:22px"><span class="c"># that's the whole start</span>
-<span class="p">/product</span> TODO — the shortest real ask that would trigger this skill</div>
+  <p class="lede">Point an agent at a rough idea and it writes features. <b>product</b> makes it decide
+  what to build, for whom, and why first — discovery, strategy, positioning, PRDs, prioritization,
+  metrics, and a living risk register, each grounded in the named PM canon and specified precisely
+  enough for design and engineering to build the right thing.</p>
+  <div class="term" style="margin-top:22px"><span class="c"># that's the whole start — natural language, no flags</span>
+<span class="p">/product</span> turn this rough idea into a validated problem and an opportunity solution tree</div>
   <p class="hosts"><span class="hl">runs on</span><span class="ref">Claude Code</span><span>Codex</span><span>Cursor</span><span>Antigravity</span><span>opencode</span><span>Grok Build</span><span>Hermes</span></p>
   <nav class="secnav" aria-label="page sections">
-    <a href="#arc">the arc</a><a href="#laws">the laws</a><a href="#pick">pick by job</a>
-    <a href="#refs">reference map</a><a href="#start">start here</a>
+    <a href="#mission">mission</a><a href="#router">the router</a><a href="#jobs">by job</a>
+    <a href="#overlays">surfaces</a><a href="#agentic">agentic</a><a href="#laws">invariants</a>
+    <a href="#handoff">handoff</a><a href="#start">start here</a>
   </nav>
-</header>
 
-<section id="arc">
-  <h2><svg class="lu" aria-hidden="true"><use href="#lu-workflow"/></svg>The workflow arc</h2>
-  <p>TODO: state the arc here — how many stages/strategies, and whether the agent can enter at
-  any point or must run it start to finish.</p>
   <div class="vidwrap" id="vidwrap"></div>
   <!-- render from remotion/, see remotion/README -->
-  <div class="poster" role="img" aria-label="TODO: describe the diagram this poster stands in for.">
-    <p class="arcline"><b>TODO stage 1</b> <span class="ar">→</span> <b>TODO stage 2</b> <span class="ar">→</span> <b>TODO stage 3</b></p>
+  <div class="herofallback router" role="img" aria-label="The faceted router: one primary job (discovery) composed with at most one surface overlay (agentic) resolves to the smallest sufficient reference set — two files, read fully, out of fifteen.">
+    <div class="rlane">
+      <div class="rlabel">① primary job<small>exactly one</small></div>
+      <div class="chips">
+        <span class="chip on">discover</span><span class="chip">strategy</span><span class="chip">position</span>
+        <span class="chip">business</span><span class="chip">market</span><span class="chip">prd</span>
+        <span class="chip">prioritize</span><span class="chip">metrics</span><span class="chip">risk</span>
+      </div>
+    </div>
+    <div class="rlane">
+      <div class="rlabel">② surface overlay<small>at most one</small></div>
+      <div class="chips">
+        <span class="chip">website</span><span class="chip">app/saas</span><span class="chip">mobile</span>
+        <span class="chip dimon">agentic</span><span class="chip">internal</span>
+      </div>
+    </div>
+    <div class="rdown"><span>compose →</span></div>
+    <div class="readset">
+      <code>discovery.md</code><code>surface-agentic.md</code>
+      <span class="cnt"><b>2 of 15</b> loaded · read fully</span>
+    </div>
+    <p class="rrule"><svg class="lu" aria-hidden="true"><use href="#lu-route"/></svg><span><b>Route before acting.</b> Pick one job and at most one surface, read only those references — never the whole library. An agentic product always adds its overlay, because it changes the acceptance criteria.</span></p>
   </div>
-  <p class="pcap">TODO: note which stages (if any) also stand alone, entered without the rest of the arc.</p>
+  <p class="pcap"><b>The router is the skill.</b> There is no fixed pipeline to run start-to-finish —
+  each job stands alone and enters where your question is. The animation traces one path; the
+  sections below map the whole surface it routes across.</p>
+</header>
 
-  <div class="steps">
-    <div><b><svg class="lu" aria-hidden="true"><use href="#lu-sliders-horizontal"/></svg>TODO stage 1</b><span>TODO one-line job for this stage. → <code>references/example.md</code></span></div>
-    <div><b><svg class="lu" aria-hidden="true"><use href="#lu-files"/></svg>TODO stage 2</b><span>TODO one-line job for this stage.</span></div>
-    <div><b><svg class="lu" aria-hidden="true"><use href="#lu-file-output"/></svg>TODO stage 3</b><span>TODO one-line job for this stage.</span></div>
+<section id="mission">
+  <h2><svg class="lu" aria-hidden="true"><use href="#lu-git-fork"/></svg>Own the decision, not the execution</h2>
+  <p>product owns the front of the lifecycle — the decision about <i>what</i> to build and <i>why</i>.
+  Experience, code, and systems belong to sibling skills; product feeds them a validated decision and
+  a clean handoff, and recommends them by name rather than silently taking their work.</p>
+  <div class="boundary">
+    <div class="bcol own">
+      <h3><svg class="lu" aria-hidden="true"><use href="#lu-shield-check"/></svg>product owns</h3>
+      <p class="sub">the front of the product lifecycle</p>
+      <ul class="bitems">
+        <li><b>discovery</b> <span class="d">— validated problems, JTBD, opportunity trees</span></li>
+        <li><b>strategy &amp; positioning</b> <span class="d">— the bet, the segment, the frame</span></li>
+        <li><b>definition</b> <span class="d">— PRDs &amp; checkable acceptance criteria</span></li>
+        <li><b>prioritization</b> <span class="d">— multi-engine ranking &amp; outcome roadmaps</span></li>
+        <li><b>measures of success</b> <span class="d">— north-star &amp; metric trees</span></li>
+        <li><b>the risk register</b> <span class="d">— a living assumption &amp; evidence ledger</span></li>
+      </ul>
+    </div>
+    <div class="bcol off">
+      <h3><svg class="lu" aria-hidden="true"><use href="#lu-git-fork"/></svg>hands off to</h3>
+      <p class="sub">contribute to; own none</p>
+      <ul class="bitems hand">
+        <li><b>design</b> <span class="d">— experience, UI, states, IA</span></li>
+        <li><b>frontend</b> <span class="d">— production client code</span></li>
+        <li><b>architecture</b> <span class="d">— system &amp; technical decisions</span></li>
+        <li><b>marketing</b> <span class="d">— demand, GTM, market copy</span></li>
+        <li><b>growth</b> <span class="d">— funnel experiments &amp; loops</span></li>
+        <li><b>sales · success</b> <span class="d">— qualification/CRM · onboarding, adoption</span></li>
+      </ul>
+    </div>
   </div>
-  <div class="loopback"><span class="ic"><svg class="lu" aria-hidden="true"><use href="#lu-shield-check"/></svg></span><span>TODO: state the loop-back rule, if this skill has a review/QA gate that can send work back through an earlier stage.</span></div>
+  <p class="bnote"><svg class="lu" aria-hidden="true"><use href="#lu-shield-alert"/></svg><span><b>Own the <i>decision</i> about what to build; not its execution.</b> When upstream artifacts (research, a founder brief, analytics) are supplied, product uses them without silently overriding decisions already made.</span></p>
+</section>
+
+<section id="router">
+  <h2><svg class="lu" aria-hidden="true"><use href="#lu-route"/></svg>The faceted router</h2>
+  <p>SKILL.md is a router, not a script. Every request selects the smallest sufficient route:
+  <b>one primary job</b> — the nine below — combined with <b>at most one surface overlay</b> that
+  reshapes discovery, metrics, and the PRD for the product type. Read the selected references
+  completely; load nothing unrelated. The nine jobs and five surfaces compose into
+  <b>9 × 5 = 45</b> routes — from a two-file read to a full front-of-lifecycle pass — without ever
+  reading all fifteen references at once.</p>
+  <div class="tblwrap"><table>
+    <tr><th>facet</th><th>options</th><th>rule</th></tr>
+    <tr>
+      <td class="job">① Primary job</td>
+      <td class="prod">discover · strategy · position · business model · market · PRD · prioritize · metrics · risk</td>
+      <td class="canon"><b>Exactly one.</b> Identify the single job the request needs.</td>
+    </tr>
+    <tr>
+      <td class="job">② Surface overlay</td>
+      <td class="prod">website · app&nbsp;&amp;&nbsp;SaaS · mobile · <span style="color:var(--tok-dim);font-weight:600">agentic</span> · internal</td>
+      <td class="canon"><b>At most one.</b> It reshapes the artifact for the product type — agentic always added when the model acts.</td>
+    </tr>
+  </table></div>
+  <div class="note"><b>Discovery before solution.</b> A route never begins at the PRD on an unvalidated
+  problem — a PRD documents a validated decision, it doesn't produce one. If the problem isn't
+  validated, the router sends you back to discovery first.</div>
+</section>
+
+<section id="jobs">
+  <h2><svg class="lu" aria-hidden="true"><use href="#lu-files"/></svg>The nine primary jobs</h2>
+  <p>Each job is one reference, read fully only when its route is selected — grounded in named canon,
+  producing a checkable artifact. This is the whole surface, not a headline slice.</p>
+  <div class="tblwrap"><table>
+    <tr><th>I need to…</th><th>Read</th><th>Grounded in</th><th>Produces</th></tr>
+    <tr>
+      <td class="job"><svg class="lu" aria-hidden="true" style="color:var(--accent)"><use href="#lu-search-check"/></svg> Discover &amp; validate the problem</td>
+      <td><code><a href="https://github.com/gabros20/product-skill/blob/main/skills/product/references/discovery.md">discovery.md</a></code></td>
+      <td class="canon"><b>Torres</b> Opportunity Solution Tree · <b>Christensen</b> JTBD · <b>Fitzpatrick</b> The Mom Test · MITRE Problem Framing</td>
+      <td class="prod">Validated problem, OST, interview plan/synthesis, JTBD statements</td>
+    </tr>
+    <tr>
+      <td class="job"><svg class="lu" aria-hidden="true" style="color:var(--accent)"><use href="#lu-compass"/></svg> Set vision &amp; strategy</td>
+      <td><code><a href="https://github.com/gabros20/product-skill/blob/main/skills/product/references/strategy.md">strategy.md</a></code></td>
+      <td class="canon"><b>Rumelt</b> strategy kernel · <b>Perri</b> strategy pyramid · <b>Maurya</b> Lean Canvas · Foundation Sprint</td>
+      <td class="prod">Strategy kernel, vision &amp; principles, Lean Canvas</td>
+    </tr>
+    <tr>
+      <td class="job"><svg class="lu" aria-hidden="true" style="color:var(--accent)"><use href="#lu-flag"/></svg> Position &amp; frame the value</td>
+      <td><code><a href="https://github.com/gabros20/product-skill/blob/main/skills/product/references/positioning.md">positioning.md</a></code></td>
+      <td class="canon"><b>Moore</b> statement &amp; beachhead · <b>Dunford</b> Obviously Awesome · <b>Osterwalder</b> Value Proposition Canvas</td>
+      <td class="prod">Positioning statement, VPC, named best-fit segment</td>
+    </tr>
+    <tr>
+      <td class="job"><svg class="lu" aria-hidden="true" style="color:var(--accent)"><use href="#lu-coins"/></svg> Model the business &amp; price it</td>
+      <td><code><a href="https://github.com/gabros20/product-skill/blob/main/skills/product/references/business-model.md">business-model.md</a></code></td>
+      <td class="canon"><b>Osterwalder</b> Business Model Canvas · value-based pricing · <b>Van Westendorp</b> · tier psychology</td>
+      <td class="prod">Business Model Canvas, pricing hypothesis (WTP bands, tiers)</td>
+    </tr>
+    <tr>
+      <td class="job"><svg class="lu" aria-hidden="true" style="color:var(--accent)"><use href="#lu-globe"/></svg> Size the market &amp; competitors</td>
+      <td><code><a href="https://github.com/gabros20/product-skill/blob/main/skills/product/references/market.md">market.md</a></code></td>
+      <td class="canon">TAM/SAM/SOM (top-down · bottom-up · comparable) · <b>Porter</b> Five Forces · SWOT · PESTEL</td>
+      <td class="prod">Source-calibrated size ranges, competitor profiles, landscape</td>
+    </tr>
+    <tr>
+      <td class="job"><svg class="lu" aria-hidden="true" style="color:var(--accent)"><use href="#lu-scroll-text"/></svg> Write the PRD &amp; acceptance criteria</td>
+      <td><code><a href="https://github.com/gabros20/product-skill/blob/main/skills/product/references/prd.md">prd.md</a></code></td>
+      <td class="canon"><b>Rachitsky</b> one-pager · <b>ProductSpec</b> machine-readable spec · Given/When/Then · job &amp; user stories</td>
+      <td class="prod">Altitude-flexed PRD (1-pager ↔ full ↔ spec), checkable criteria</td>
+    </tr>
+    <tr>
+      <td class="job"><svg class="lu" aria-hidden="true" style="color:var(--accent)"><use href="#lu-list-ordered"/></svg> Prioritize &amp; build a roadmap</td>
+      <td><code><a href="https://github.com/gabros20/product-skill/blob/main/skills/product/references/prioritization.md">prioritization.md</a></code></td>
+      <td class="canon"><b>RICE · ICE</b> · Opportunity Score (Olsen) · <b>Kano</b> · MoSCoW · Weighted Scoring</td>
+      <td class="prod">Cross-framework score table + divergence, Now/Next/Later roadmap</td>
+    </tr>
+    <tr>
+      <td class="job"><svg class="lu" aria-hidden="true" style="color:var(--accent)"><use href="#lu-target"/></svg> Define success metrics</td>
+      <td><code><a href="https://github.com/gabros20/product-skill/blob/main/skills/product/references/metrics.md">metrics.md</a></code></td>
+      <td class="canon">North-star metric tree · <b>HEART</b> (Google) · <b>AARRR</b> (McClure) · Lean Analytics · OKRs (Doerr)</td>
+      <td class="prod">North star + metric tree, HEART/AARRR mapping, guardrails, OKRs</td>
+    </tr>
+    <tr>
+      <td class="job"><svg class="lu" aria-hidden="true" style="color:var(--accent)"><use href="#lu-shield-alert"/></svg> Surface &amp; maintain risks</td>
+      <td><code><a href="https://github.com/gabros20/product-skill/blob/main/skills/product/references/risk-register.md">risk-register.md</a></code></td>
+      <td class="canon"><b>Cagan</b> 4→8 risk taxonomy · demand hierarchy L0–L4 · evidence ladder · red-team · pre-mortem (Klein)</td>
+      <td class="prod">Living register: assumptions, verdicts, red-team &amp; pre-mortem log</td>
+    </tr>
+  </table></div>
+  <p style="margin-top:12px">Full router table &amp; invariants: <a href="https://github.com/gabros20/product-skill/blob/main/skills/product/SKILL.md#route-before-acting">SKILL.md</a>.</p>
+
+  <div class="canonband">
+    <div class="canongrp"><h4>discovery</h4><div class="cc"><span>Continuous Discovery (Torres)</span><span>Opportunity Solution Tree</span><span>JTBD · Forces of Progress</span><span>The Mom Test</span><span>MITRE Problem Framing</span><span>Proof-of-Life probe</span></div></div>
+    <div class="canongrp"><h4>strategy</h4><div class="cc"><span>Good Strategy/Bad Strategy (Rumelt)</span><span>Escaping the Build Trap (Perri)</span><span>Working Backwards tenets</span><span>Lean Canvas (Maurya)</span><span>Foundation Sprint</span></div></div>
+    <div class="canongrp"><h4>positioning</h4><div class="cc"><span>Crossing the Chasm (Moore)</span><span>Obviously Awesome (Dunford)</span><span>Value Proposition Canvas</span><span>beachhead / whole product</span></div></div>
+    <div class="canongrp"><h4>business &amp; market</h4><div class="cc"><span>Business Model Canvas</span><span>value-based pricing</span><span>Van Westendorp</span><span>TAM/SAM/SOM</span><span>Porter · SWOT · PESTEL</span></div></div>
+    <div class="canongrp"><h4>definition</h4><div class="cc"><span>Lenny one-pager</span><span>ProductSpec (.product-spec.md)</span><span>Given/When/Then</span><span>job story · user story</span></div></div>
+    <div class="canongrp"><h4>prioritize &amp; measure</h4><div class="cc"><span>RICE · ICE</span><span>Opportunity Score · Kano</span><span>North-star metric tree</span><span>HEART · AARRR</span><span>OKRs (Doerr)</span></div></div>
+    <div class="canongrp"><h4>risk</h4><div class="cc"><span>Cagan product risks (Inspired)</span><span>demand hierarchy L0–L4</span><span>evidence ladder</span><span>strategy red-team</span><span>pre-mortem (Klein)</span></div></div>
+  </div>
+</section>
+
+<section id="overlays">
+  <h2><svg class="lu" aria-hidden="true"><use href="#lu-layers"/></svg>Five surface overlays</h2>
+  <p>One overlay, at most, reshapes the job for the product type — the same PRD is scoped differently
+  for a marketing site than a SaaS app. Agentic is the first-class differentiator, expanded below.</p>
+  <div class="overlays">
+    <div class="ov">
+      <h3><svg class="lu" aria-hidden="true"><use href="#lu-globe"/></svg>Website <span class="file">surface-website.md</span></h3>
+      <p class="reshape">Marketing / content site: the "product" is a <b>positioning-and-conversion</b>
+      artifact. Proof strategy by vertical &amp; stakes; E-E-A-T and credibility layers as requirements.</p>
+      <p class="lens"><span class="k">lens</span>Conversion rate · lead quality · Attention Ratio</p>
+    </div>
+    <div class="ov">
+      <h3><svg class="lu" aria-hidden="true"><use href="#lu-boxes"/></svg>App &amp; SaaS <span class="file">surface-app-saas.md</span></h3>
+      <p class="reshape">Accounts &amp; recurring usage: revenue is a <b>lifecycle</b>, not a conversion.
+      Onboarding and the core loop are first-class PRD scope; churn is a discovery question.</p>
+      <p class="lens"><span class="k">lens</span>Activation · retention · MRR / churn tree</p>
+    </div>
+    <div class="ov">
+      <h3><svg class="lu" aria-hidden="true"><use href="#lu-flag"/></svg>Mobile <span class="file">surface-mobile.md</span></h3>
+      <p class="reshape">Store distribution, <b>ASO framing</b>, and platform permissions as product
+      constraints; short, interruption-driven sessions frame the jobs.</p>
+      <p class="lens"><span class="k">lens</span>Install→activation · store health · permissions</p>
+    </div>
+    <div class="ov wedge">
+      <h3><svg class="lu" aria-hidden="true"><use href="#lu-bot"/></svg>Agentic / AI <span class="badge">differentiator</span></h3>
+      <p class="reshape">The model acts under uncertainty. <b>Eval-as-acceptance-criteria</b>,
+      capability &amp; failure-mode mapping, human-in-the-loop autonomy, and model choice as a product
+      decision.</p>
+      <p class="lens"><span class="k">lens</span>Eval pass-rate · escalation · cost-per-task</p>
+    </div>
+    <div class="ov">
+      <h3><svg class="lu" aria-hidden="true"><use href="#lu-boxes"/></svg>Internal / enterprise <span class="file">surface-internal.md</span></h3>
+      <p class="reshape">Built for employees, not customers: <b>adoption replaces acquisition</b>,
+      the buyer isn't the user, and operational cost drives prioritization.</p>
+      <p class="lens"><span class="k">lens</span>Adoption rate · task-time · error reduction</p>
+    </div>
+  </div>
+</section>
+
+<section id="agentic">
+  <h2><svg class="lu" aria-hidden="true"><use href="#lu-bot"/></svg>The agentic wedge</h2>
+  <p>Nearly no PM discipline covers products whose value comes from a model <i>acting</i>, not a
+  deterministic feature wrapped around a model call. For an agentic feature, desirability and
+  feasibility collapse — a job is desirable only if a model can do it reliably, and reliability is
+  <b>empirical</b>. So the headline move:</p>
+  <div class="wedgehead"><svg class="lu" aria-hidden="true"><use href="#lu-shield-check"/></svg>The eval set <i>is</i> the acceptance criteria — not a QA afterthought.</div>
+  <div class="wedgebody">
+    <div class="evalgrid">
+      <div>
+        <h3>Registered in the PRD, gating launch</h3>
+<pre class="evalblock"><span class="c"># productspec-ai-evals — an acceptance criterion, re-checked</span>
+<span class="c"># every time the model or prompt changes</span>
+<span class="k">id</span>: EVAL-1
+<span class="k">job</span>: <span class="s">draft a support reply from the ticket thread</span>
+<span class="k">task_set</span>: <span class="s">40 real transcripts, not invented cases</span>
+<span class="k">evaluator</span>: <span class="s">llm_judge</span>  <span class="c"># state the judge's own error rate</span>
+<span class="k">pass_threshold</span>: <span class="s">≥ 90%</span> · <span class="s">0 hallucination-flagged</span>
+<span class="k">offline_eval</span>: <span class="s">fixed set, before every release</span>
+<span class="k">online_eval</span>: <span class="s">sampled prod traffic — catches drift</span>
+<span class="k">regression_gate</span>: <span class="s">block release if it regresses</span></pre>
+      </div>
+      <div class="wcol">
+        <h3>Capability tier per job (§ map before a PRD line)</h3>
+        <ul class="tierlist">
+          <li class="good"><span class="t">Reliable</span><span class="d">clears the bar with no scaffolding → candidate for <code>act</code></span></li>
+          <li class="warn"><span class="t">Assistable</span><span class="d">needs retrieval/tools → ship the scaffolding as a hard dependency</span></li>
+          <li class="bad"><span class="t">Unreliable</span><span class="d">fails even scaffolded → don't ship the job agentically</span></li>
+        </ul>
+        <h3>Autonomy by reversibility &amp; blast radius</h3>
+        <ul class="autlist">
+          <li><span class="t">Suggest</span><span class="d">proposes; acts only on explicit user action</span></li>
+          <li><span class="t">Draft</span><span class="d">full artifact for the user to edit/send</span></li>
+          <li><span class="t">Act-with-approval</span><span class="d">executes after one confirmation</span></li>
+          <li><span class="t">Act</span><span class="d">no per-action confirmation — reversible, low blast radius</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="sharprule"><b>The sharp distinction:</b> eval thresholds that gate a release live in
+    <i>acceptance criteria</i> (pre-launch, pass/fail) — never in <i>success metrics</i> (post-launch
+    outcome tracking). The same score can feed both; conflating them lets a team ship on a number that
+    was never a gate. Failure modes are first-class product concerns, each mapped to an eval case or a
+    risk-register entry:
+      <div class="cc"><span>hallucination</span><span>wrong-tool selection</span><span>silent error</span><span>latency spikes</span><span>context poisoning / drift</span></div>
+    </div>
+  </div>
 </section>
 
 <section id="laws">
-  <h2><svg class="lu" aria-hidden="true"><use href="#lu-shield-check"/></svg>The non-negotiable laws</h2>
-  <p>These govern everything in the references below — the load-bearing ones, condensed.</p>
+  <h2><svg class="lu" aria-hidden="true"><use href="#lu-shield-check"/></svg>The universal invariants</h2>
+  <p>Six rules govern every route, whichever references it loads — the load-bearing ones, condensed.</p>
   <ul class="rules">
-    <li><b><svg class="lu" aria-hidden="true"><use href="#lu-layers"/></svg>TODO law 1</b>TODO one to two sentences.</li>
-    <li><b><svg class="lu" aria-hidden="true"><use href="#lu-sliders-horizontal"/></svg>TODO law 2</b>TODO one to two sentences.</li>
-    <li><b><svg class="lu" aria-hidden="true"><use href="#lu-gauge"/></svg>TODO law 3</b>TODO one to two sentences, as a full-width capstone if it's the closing rule.</li>
+    <li><b><svg class="lu" aria-hidden="true"><use href="#lu-search-check"/></svg>Discovery before solution</b>Frame opportunities, not features. Never let a stakeholder design the solution before the problem is validated; run the cheapest probe that tells the harshest truth.</li>
+    <li><b><svg class="lu" aria-hidden="true"><use href="#lu-tag"/></svg>Label the evidence</b>Tag every claim <span class="mono">Fact</span> / <span class="mono">Inference</span> / <span class="mono">Assumption</span>. Assumptions flow to the risk register, never into a fabricated fact.</li>
+    <li><b><svg class="lu" aria-hidden="true"><use href="#lu-gauge"/></svg>Calibrated confidence</b>Market sizes and targets are ranges with a source tier, never a false point. TAM is a ceiling; derive revenue from SOM.</li>
+    <li><b><svg class="lu" aria-hidden="true"><use href="#lu-split"/></svg>Prioritization is multi-engine</b>Run every applicable framework, report the <i>divergence</i> as the finding, and refuse to fabricate missing inputs to force one rank.</li>
+    <li><b><svg class="lu" aria-hidden="true"><use href="#lu-target"/></svg>Outcomes over outputs</b>A metric, a %, a timeframe, a named segment — never "great results" or "everyone." Specificity over superlatives.</li>
+    <li><b><svg class="lu" aria-hidden="true"><use href="#lu-git-fork"/></svg>State the surface and the register</b>Name the product type; recommend — never silently invoke — the sibling skills for work product doesn't own. Every artifact records its objective, evidence split, decisions, success criteria, and open questions.</li>
   </ul>
 </section>
 
-<section id="pick">
-  <h2><svg class="lu" aria-hidden="true"><use href="#lu-clipboard-list"/></svg>Pick by job</h2>
-  <p>The SKILL.md is a router — load only the reference your current job needs. A condensed cut of the full table:</p>
-  <div class="tblwrap"><table>
-    <tr><th>I need to…</th><th>Read</th></tr>
-    <tr><td>TODO job 1</td><td><code><a href="https://github.com/gabros20/product-skill/blob/main/skills/product/references/example.md">example.md</a></code></td></tr>
-    <tr><td>TODO job 2</td><td><code><a href="https://github.com/gabros20/product-skill/blob/main/skills/product/references/example.md">example.md</a></code></td></tr>
-  </table></div>
-  <p style="margin-top:12px">Full table: <a href="https://github.com/gabros20/product-skill/blob/main/skills/product/SKILL.md#route-before-acting">SKILL.md</a>.</p>
-  <div class="note"><b>Complementary, not duplicated:</b> TODO — name the adjacent skills this one hands off to instead of duplicating.</div>
-</section>
-
-<section id="refs">
-  <h2><svg class="lu" aria-hidden="true"><use href="#lu-files"/></svg>Reference map</h2>
-  <p>TODO: how many references, grouped by the stage/strategy they serve. Every one is copy-pasteable rather than abstract — the whole point of the router is that you never read all of them at once.</p>
-  <dl class="refmap">
-    <div class="refrow">
-      <dt class="reflabel"><svg class="lu" aria-hidden="true"><use href="#lu-sliders-horizontal"/></svg>TODO stage 1<span class="ct">1</span></dt>
-      <dd class="refchips"><span class="ref"><code>example.md</code></span></dd>
+<section id="handoff">
+  <h2><svg class="lu" aria-hidden="true"><use href="#lu-git-fork"/></svg>The handoff seam</h2>
+  <p>When downstream build work is expected, product emits a compact <code>handoff.yaml</code> beside
+  the human artifact — a routing <i>index</i> into the PRD, strategy, or metric tree, never a copy of
+  it. Standalone by default; the companion appears only in pipeline mode, when a consumer will
+  actually read it.</p>
+  <div class="seam">
+    <div class="seambox">
+      <h3><svg class="lu" aria-hidden="true"><use href="#lu-scroll-text"/></svg>product decides</h3>
+<pre class="seamyaml"><span class="k">skill</span>: <span class="v">product</span>
+<span class="k">status</span>: <span class="v">complete</span>
+<span class="req">objective</span>: <span class="v">""</span>   <span style="color:var(--glyph)"># only required field</span>
+<span class="k">artifacts_created</span>: <span class="v">[prd, metric-tree]</span>
+<span class="k">decisions</span>: · <span class="k">assumptions</span>: · <span class="k">constraints</span>:
+<span class="k">risks</span>: <span class="v">[R-01, R-04]</span>  <span style="color:var(--glyph)"># pointers, not the register</span>
+<span class="k">validation</span>: <span class="v">performed / remaining</span>
+<span class="k">recommended_next</span>: <span class="v">design · architecture</span></pre>
     </div>
-  </dl>
-  <p style="margin-top:16px">Browse the full set: <a href="https://github.com/gabros20/product-skill/tree/main/skills/product/references">skills/product/references/</a>.</p>
+    <div class="seamarrows"><span>→</span><span>→</span></div>
+    <div class="downstream">
+      <div class="seambox mid">
+        <h3><svg class="lu" aria-hidden="true"><use href="#lu-palette"/></svg>design</h3>
+        <p>Validated problem, target segment, the success metrics to design toward, hard constraints, and the open questions it must not silently resolve.</p>
+      </div>
+      <div class="seambox mid">
+        <h3><svg class="lu" aria-hidden="true"><use href="#lu-boxes"/></svg>architecture</h3>
+        <p>Non-functional requirements, constraints, technical-feasibility risks, and acceptance criteria that gate technical decisions — an agentic eval threshold constrains model choice.</p>
+      </div>
+    </div>
+  </div>
+  <p class="seamnote"><svg class="lu" aria-hidden="true"><use href="#lu-shield-alert"/></svg><span><b>Seam discipline.</b> The human artifact is the real deliverable; if a consumer needs more than the index gives, the artifact itself is incomplete — the yaml never grows to compensate. Every downstream skill tolerates every field but <code>objective</code> being absent.</span></p>
 </section>
 
 <section id="start">
   <h2><svg class="lu" aria-hidden="true"><use href="#lu-file-input"/></svg>Start here</h2>
-  <p>Install once. It's a plain <code>SKILL.md</code> router — no flags, no config, no scripts —
-  so it activates on natural-language phrasing (TODO: a couple of real trigger examples) rather
-  than a fixed command.</p>
-  <div class="term"><span class="c"># skills.sh ecosystem</span>
-npx skills add gabros20/product-skill
+  <p>Install once. It's a plain <code>SKILL.md</code> router — no flags, no config, no scripts — so it
+  activates on natural-language phrasing ("validate this problem", "write a PRD", "prioritize this
+  backlog") rather than a fixed command.</p>
+  <div class="term"><span class="c"># skills.sh ecosystem (installs globally to supported clients)</span>
+npx skills add gabros20/product-skill -g -y
 
 <span class="c"># clone + installer (per-host targets)</span>
-git clone https://github.com/gabros20/product-skill && cd product-skill
-./install.sh codex   <span class="c"># or: claude | agents | cursor | antigravity | opencode | grok | hermes | all</span>
+git clone https://github.com/gabros20/product-skill &amp;&amp; cd product-skill
+./install.sh codex   <span class="c"># or: claude | cursor | antigravity | opencode | grok | hermes | agents | all</span>
 
-<span class="c"># use</span>
-<span class="p">/product</span> TODO — a real, short invocation example
-<span class="p">/product</span> TODO — a second real, short invocation example</div>
+<span class="c"># use — natural language, any host</span>
+<span class="p">/product</span> write a PRD for the new onboarding flow, SaaS product
+<span class="p">/product</span> define acceptance criteria for our AI support agent   <span class="c"># → eval set + thresholds</span>
+<span class="p">/product</span> prioritize this backlog and give me an outcome roadmap</div>
   <p style="margin-top:14px">The same install runs on any <a href="https://agentskills.io">Agent&nbsp;Skills</a>
-  host. Codex installs to <code>${CODEX_HOME:-$HOME/.codex}/skills</code>; <code>agents</code>
-  remains a separate cross-agent installation target.</p>
+  host. Codex installs to <code>${CODEX_HOME:-$HOME/.codex}/skills</code> and triggers with
+  <code>$product</code>; <code>agents</code> remains a separate cross-agent installation target.</p>
   <details class="disc">
     <summary>install targets by host</summary>
     <div>
       <div class="tblwrap"><table>
         <tr><th>host</th><th>install target</th><th>command</th></tr>
-        <tr><td class="dim">Claude Code</td><td><code>~/.claude/skills</code></td><td><code>./install.sh claude</code></td></tr>
-        <tr><td class="dim">Codex</td><td><code>${CODEX_HOME:-$HOME/.codex}/skills</code></td><td><code>./install.sh codex</code></td></tr>
-        <tr><td class="dim">Cross-agent path</td><td><code>~/.agents/skills</code></td><td><code>./install.sh agents</code></td></tr>
-        <tr><td class="dim">Cursor CLI</td><td><code>~/.cursor/skills</code></td><td><code>./install.sh cursor</code></td></tr>
-        <tr><td class="dim">Antigravity (IDE + agy)</td><td><code>~/.gemini/…/skills</code></td><td><code>./install.sh antigravity</code></td></tr>
-        <tr><td class="dim">opencode</td><td><code>~/.config/opencode/skills</code></td><td><code>./install.sh opencode</code></td></tr>
-        <tr><td class="dim">Grok Build</td><td><code>~/.grok/skills</code></td><td><code>./install.sh grok</code></td></tr>
-        <tr><td class="dim">Hermes</td><td><code>~/.hermes/skills</code></td><td><code>./install.sh hermes</code></td></tr>
+        <tr><td class="job">Claude Code</td><td><code>~/.claude/skills</code></td><td><code>./install.sh claude</code></td></tr>
+        <tr><td class="job">Codex</td><td><code>${CODEX_HOME:-$HOME/.codex}/skills</code></td><td><code>./install.sh codex</code></td></tr>
+        <tr><td class="job">Cross-agent path</td><td><code>~/.agents/skills</code></td><td><code>./install.sh agents</code></td></tr>
+        <tr><td class="job">Cursor CLI</td><td><code>~/.cursor/skills</code></td><td><code>./install.sh cursor</code></td></tr>
+        <tr><td class="job">Antigravity (IDE + agy)</td><td><code>~/.gemini/…/skills</code></td><td><code>./install.sh antigravity</code></td></tr>
+        <tr><td class="job">opencode</td><td><code>~/.config/opencode/skills</code></td><td><code>./install.sh opencode</code></td></tr>
+        <tr><td class="job">Grok Build</td><td><code>~/.grok/skills</code></td><td><code>./install.sh grok</code></td></tr>
+        <tr><td class="job">Hermes</td><td><code>~/.hermes/skills</code></td><td><code>./install.sh hermes</code></td></tr>
       </table></div>
-      <p style="margin-top:12px">Prefer <code>npx skills add gabros20/product-skill</code> when you have Node — it maps supported clients itself.</p>
+      <p style="margin-top:12px">Prefer <code>npx skills add gabros20/product-skill -g -y</code> when you have Node — it maps supported clients itself.</p>
     </div>
   </details>
   <details class="disc">
     <summary>what's in the repo</summary>
     <div>
-      <div class="files"><span class="hl">skills/product/</span>          <span class="d">the skill: SKILL.md (router) + references/</span>
+      <div class="files"><span class="hl">skills/product/</span>          <span class="d">the skill: SKILL.md (router) + 15 references/</span>
 <span class="hl">docs/</span>                      <span class="d">installation · usage · recipes</span>
-<span class="hl">site/</span>                      <span class="d">optional guide — deploys to product-skill.vercel.app</span>
+<span class="hl">site/</span>                      <span class="d">this guide — deploys to product-skill.vercel.app</span>
 install.sh                 <span class="d">installer (claude | codex | cursor | antigravity | opencode | grok | hermes | agents | all)</span>
 README.md · CHANGELOG.md · LICENSE</div>
       <p>More docs: <a href="https://github.com/gabros20/product-skill/blob/main/docs/installation.md">docs/installation.md</a> ·
@@ -350,17 +669,16 @@ README.md · CHANGELOG.md · LICENSE</div>
 </section>
 
 <footer>
-  <span><span class="mono">/product</span> — Decide what to build, for whom, and why — discovery, strategy, and PRD across any product type.</span>
+  <span><span class="mono">/product</span> — decide what to build, for whom, and why.</span>
   <span><a href="https://github.com/gabros20/product-skill">github.com/gabros20/product-skill</a> · <a href="/llms.txt">llms.txt</a> · MIT</span>
 </footer>
 </div>
 <script>
 (function () {
-  // Progressive enhancement over the static .arcline fallback above: swaps in the
-  // hero Remotion video (light/dark). On any load error it removes the
-  // slot and leaves the static arc line in place.
+  // Progressive enhancement over the static router fallback above: swaps in the hero Remotion
+  // video (light/dark). On any load error it removes the slot, leaving the static router in place.
   if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  if (innerWidth < 720) return; // the static line reads better on phones
+  if (innerWidth < 720) return; // the static router reads better on phones
   var wrap = document.getElementById("vidwrap");
   if (!wrap || !document.createElement("video").canPlayType) return;
   var mq = matchMedia("(prefers-color-scheme: dark)");
@@ -370,7 +688,7 @@ README.md · CHANGELOG.md · LICENSE</div>
   v.autoplay = true;
   v.playsInline = true;
   v.setAttribute("playsinline", "");
-  v.setAttribute("aria-label", "TODO: describe what the hero animation shows.");
+  v.setAttribute("aria-label", "The product skill in motion: a rough idea routed through discovery, strategy and positioning, a PRD with an agentic eval-as-acceptance-criteria beat, a prioritized roadmap and metric tree, and a handoff to design and architecture.");
   v.addEventListener("loadeddata", function () { document.body.classList.add("has-vid"); });
   v.addEventListener("error", function () { wrap.remove(); });
   function apply() {

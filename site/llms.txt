@@ -1,30 +1,46 @@
 # product
 
-> Decide what to build, for whom, and why — discovery, strategy, and PRD across any product type.. Installs as an agent skill.
+> Decide what to build, for whom, and why — then specify it precisely enough that design and engineering build the right thing. A faceted agent skill for the front of the product lifecycle: discovery, strategy, positioning, business model, market sizing, PRDs and acceptance criteria, prioritization, success metrics, and a living risk register.
 
-TODO — one paragraph: what problem this replaces, the workflow it runs (stages/strategies, in
-order), and what "read only what you need" the router gives you. Claude Code is the reference
-host; it's plain Agent Skills format (agentskills.io), so it installs on Codex, Cursor,
-Antigravity, opencode, Grok Build, and Hermes too.
+product owns the *decision* about what to build, not its execution. SKILL.md is a faceted router: select one primary job (of nine) and at most one surface overlay (of five) that reshapes the artifact for the product type — read only those references fully, never the whole library. Every claim is tagged Fact / Inference / Assumption; numbers carry source-calibrated confidence; prioritization runs every applicable framework and reports the divergence. Agentic/AI is a first-class surface: for a model that acts, the eval set *is* the acceptance criteria, gating launch. Installs as plain Agent Skills format (agentskills.io) on Claude Code, Codex, Cursor, Antigravity, opencode, Grok Build, Hermes, and more.
 
 ## Install
 
-- npm/skills.sh: `npx skills add gabros20/product-skill`
-- Clone + installer (per-host targets: claude | codex | cursor | antigravity | opencode | grok | hermes | agents | all): `git clone https://github.com/gabros20/product-skill && cd product-skill && ./install.sh codex`
-- Manual copy: `cp -R skills/product ~/.claude/skills/product`
+- npm/skills.sh: `npx skills add gabros20/product-skill -g -y`
+- Clone + installer: `git clone https://github.com/gabros20/product-skill && cd product-skill && ./install.sh codex`
+- Manual: `cp -R skills/product ~/.claude/skills/product`
 
 ## Docs
 
-- [README.md](https://raw.githubusercontent.com/gabros20/product-skill/main/README.md): overview, install, workflow, and repository map.
-- [skills/product/SKILL.md](https://raw.githubusercontent.com/gabros20/product-skill/main/skills/product/SKILL.md): runtime router, workflow, artifact contract, and completion rules.
-- [docs/installation.md](https://raw.githubusercontent.com/gabros20/product-skill/main/docs/installation.md): installation and verification by client.
-- [docs/usage.md](https://raw.githubusercontent.com/gabros20/product-skill/main/docs/usage.md): activation boundary, routes, outputs, and completion.
-- [docs/recipes.md](https://raw.githubusercontent.com/gabros20/product-skill/main/docs/recipes.md): representative starting prompts.
+- [README.md](https://raw.githubusercontent.com/gabros20/product-skill/main/README.md)
+- [skills/product/SKILL.md](https://raw.githubusercontent.com/gabros20/product-skill/main/skills/product/SKILL.md)
+- [docs/installation.md](https://raw.githubusercontent.com/gabros20/product-skill/main/docs/installation.md)
+- [docs/usage.md](https://raw.githubusercontent.com/gabros20/product-skill/main/docs/usage.md)
+- [docs/recipes.md](https://raw.githubusercontent.com/gabros20/product-skill/main/docs/recipes.md)
 
-## Reference inventory (`skills/product/references/`)
+## Reference inventory (`skills/product/references/`) — 15 files
 
-- `example.md` — TODO: what job this reference answers.
+### Primary jobs (pick exactly one)
+- `discovery.md` — validate the problem: Opportunity Solution Tree (Torres), JTBD (Christensen), The Mom Test, MITRE Problem Framing, Proof-of-Life probe
+- `strategy.md` — the bet: strategy kernel (Rumelt), strategy pyramid (Perri), product principles, Lean Canvas (Maurya), Foundation Sprint
+- `positioning.md` — the frame: Moore positioning statement & beachhead, Dunford's method, Value Proposition Canvas (Osterwalder)
+- `business-model.md` — Business Model Canvas + pricing hypothesis: value-based method, Van Westendorp, tier psychology
+- `market.md` — TAM/SAM/SOM (top-down/bottom-up/comparable) with confidence tiers; Porter's Five Forces / SWOT / PESTEL; competitor profiles
+- `prd.md` — altitude-flexed PRD (one-pager ↔ full ↔ machine-readable ProductSpec), Given/When/Then acceptance criteria, job/user stories
+- `prioritization.md` — multi-engine: RICE, ICE, Opportunity Score, Kano, MoSCoW, Weighted Scoring; divergence is the finding; outcome roadmap
+- `metrics.md` — North-star + metric tree, HEART (Google), AARRR (McClure), Lean Analytics criteria, guardrails, OKRs (Doerr)
+- `risk-register.md` — living register: 8-category taxonomy (Cagan), demand hierarchy L0–L4, evidence ladder, four-verdict contract, red-team, pre-mortem
+
+### Surface overlays (at most one)
+- `surface-website.md` — marketing/content: conversion, proof strategy, Attention Ratio
+- `surface-app-saas.md` — accounts & recurring usage: activation/retention, pricing tiers, MRR/churn
+- `surface-mobile.md` — store distribution, ASO, permissions, interruption-driven sessions
+- `surface-agentic.md` — **the differentiator**: capability & failure-mode mapping, eval-as-acceptance-criteria, human-in-the-loop autonomy, non-determinism/latency/cost/safety risk, model choice
+- `surface-internal.md` — internal/enterprise tools: adoption over acquisition, buyer ≠ user, cost-based prioritization
+
+### Pipeline
+- `handoff.md` — standalone vs pipeline behavior and the `handoff.yaml` companion consumed by `design` and `architecture`
 
 ## Optional
 
-- [Visual guide](https://product-skill.vercel.app): the workflow, boundaries, and reference map on one page.
+- [Visual guide](https://product-skill.vercel.app): the faceted router, the nine jobs, five surfaces, the agentic wedge, invariants, and the handoff seam on one page.
