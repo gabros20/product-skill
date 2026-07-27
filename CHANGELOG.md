@@ -10,6 +10,17 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 ### Added
 - Queue unreleased changes here.
 
+## [0.1.2] — 2026-07-27
+
+### Fixed
+- Mission and boundary: named only 3 of 9 sibling skills, the lowest cross-reference count in the
+  family. Extended the routing sentence to add `quality` (the ship/no-ship decision and independent
+  verification), `operate` (running the product in production), `backend`/`data`/`ai` (server
+  behavior, the analytical data plane, and model-driven behavior — the same build-sibling class as
+  `frontend`, previously omitted), and `automation` (business processes spanning systems the
+  product does not own). No new section; the existing sentence gained clauses. Runtime pack
+  otherwise unchanged.
+
 ## [0.1.1] — 2026-07-23
 
 ### Fixed
@@ -29,5 +40,6 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
   eval-as-acceptance-criteria — as the differentiator. 15 references, a `handoff.yaml` contract
   into `design`/`architecture`, and activation/traversal/output/compression evals.
 
+[0.1.2]: https://github.com/gabros20/product-skill/releases/tag/v0.1.2
 [0.1.1]: https://github.com/gabros20/product-skill/releases/tag/v0.1.1
 [0.1.0]: https://github.com/gabros20/product-skill/releases/tag/v0.1.0
