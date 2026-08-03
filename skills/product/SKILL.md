@@ -124,3 +124,11 @@ Load only what the selected route requires.
   [agentic](references/surface-agentic.md) · [internal](references/surface-internal.md)
 - Pipeline: [handoff](references/handoff.md) — standalone vs pipeline behavior and the `handoff.yaml`
   companion consumed by `design` and `architecture`.
+
+## Artifact home
+
+Deliverables this skill produces default to `digital-product/product/` at the working repository's
+root, with cross-skill state in `digital-product/LEDGER.md` — created on first use and committed
+with the repo. The `digital-product` composer skill owns this convention; solo use writes to the
+same place. Never write into `.orchestrate/` — that folder belongs to an orchestration run's
+execution state, not to this family's deliverables.
