@@ -4,7 +4,8 @@ description: >-
   Decide what to build, for whom, and why, then specify it for delivery — product discovery,
   strategy, and PRDs across websites, web/SaaS apps, mobile, agentic/AI products, and internal
   tools. Use for opportunity discovery, user and market research, jobs-to-be-done, strategy and
-  positioning, business-model and pricing, market sizing, PRDs and acceptance criteria,
+  positioning, business-model and pricing, dunning/billing-failure recovery, market sizing, PRDs
+  and acceptance criteria,
   prioritization and roadmaps, success metrics and metric-trees, and risk/assumption registers. Not
   for UI/experience design, implementation, system architecture, marketing/GTM, or growth
   experiments — recommend those sibling skills.
@@ -47,7 +48,7 @@ automatically unless the user requested a composition workflow.
 | Discover the problem, talk to users, synthesize research | [Discovery](references/discovery.md) | Opportunity Solution Tree, interview plan/synthesis, validated problem, JTBD |
 | Set product vision and strategy | [Strategy](references/strategy.md) | Strategy kernel, vision, principles, Lean Canvas |
 | Position the product and define its value proposition | [Positioning](references/positioning.md) | Positioning statement, value-proposition canvas, segment and audience selection |
-| Model the business and price it | [Business model](references/business-model.md) | Business Model Canvas, pricing hypotheses (value-based, tiers, Van Westendorp) |
+| Model the business and price it | [Business model](references/business-model.md) | Business Model Canvas, pricing hypotheses (value-based, tiers, Van Westendorp), dunning/billing-failure recovery (involuntary churn) |
 | Size the market and analyze competitors | [Market](references/market.md) | TAM/SAM/SOM with source-calibrated confidence, competitor profiles, landscape |
 | Write the PRD, spec, or acceptance criteria | [PRD](references/prd.md) | Altitude-flexed PRD (1-pager ↔ full ↔ machine-readable), Given/When/Then criteria, user/job stories |
 | Prioritize and build a roadmap | [Prioritization](references/prioritization.md) | Multi-engine prioritization (RICE/ICE/Opportunity-Score/Kano/MoSCoW) + outcome roadmap |

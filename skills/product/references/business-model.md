@@ -32,6 +32,7 @@ Produces:
 
 - Business Model Canvas (Osterwalder)
 - Pricing hypothesis (value-based method, Van Westendorp, tier psychology)
+- Dunning and billing-failure recovery (involuntary churn)
 - Validation
 - Failure modes and handoff
 
@@ -100,6 +101,25 @@ or the curves have no anchor to converge on.
 - Never let tier psychology substitute for the value-based hypothesis in §1 — it shapes
   presentation of an already-justified price, not the price itself.
 
+### 3. Dunning and billing-failure recovery (involuntary churn)
+
+If the model includes recurring billing, `product` owns the dunning mechanism — the
+commercial-lifecycle rule for what happens when a renewal payment fails: the retry schedule, the
+grace period, when access degrades, and when the account is finally counted as churned. This is a
+modeling decision, not a messaging campaign, and it is the involuntary side of churn — the
+voluntary/involuntary split has to be defined here before any downstream retention conclusion can
+be honest.
+
+This claim closes a routing loop three sibling packs documented before product stated it (family
+ruling, 2026-08-03): `marketing/references/lifecycle-and-email.md` routes dunning email out of
+lifecycle marketing to `product`; `success/references/retention-execution.md` treats a failed card
+as `product`'s mechanism and handles only the relationship side of a confirmed *voluntary* churn;
+`sales` routes stalled-payment deals here. What stays elsewhere: any recovery email still passes
+`marketing`'s email-compliance checklist like every other send; `success` owns the human outreach
+on a high-touch account once the mechanism has run; and on native mobile IAP subscriptions the
+platform's own billing retry applies — do not design a custom dunning cadence there
+(`success/references/surface-mobile-subscription.md`).
+
 ## Validation
 
 - Every BMC block is filled or explicitly flagged as an assumption with an owner.
@@ -107,6 +127,8 @@ or the curves have no anchor to converge on.
   evidence quality, and a tier structure — not a single unexplained number.
 - Every unvalidated pricing or business-model assumption has a corresponding
   [risk-register](risk-register.md) entry.
+- If billing is recurring, the dunning rule (§3: retry schedule, grace period, churn cut-over) is
+  stated and the voluntary/involuntary churn split is defined.
 
 ## Failure modes and handoff
 
