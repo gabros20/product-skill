@@ -1,5 +1,7 @@
 # product — Product Strategy
 
+**Family hub:** [digital-product-skill.vercel.app](https://digital-product-skill.vercel.app) — the 15-skill Digital Product family and its composer.
+
 Decide **what to build, for whom, and why** — then specify it precisely enough that design and
 engineering build the right thing. `product` is the Discover/Strategy stage of the
 [Digital Product Skills](https://github.com/gabros20) family: an agent skill for product discovery,
