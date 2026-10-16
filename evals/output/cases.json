@@ -65,13 +65,13 @@
   },
   {
     "id": "positioning-beachhead-signal",
-    "prompt": "We sell a subscription that lets small organizations update their own website by chat. Our plan is to target businesses whose sites haven't changed in two years. Pick our beachhead segment.",
+    "prompt": "We sell a subscription that helps small clubs keep a member newsletter going. We plan to target clubs that haven't sent a newsletter in two years. Pick our beachhead segment.",
     "assertions": [
-      "Challenges staleness/absence-of-change as a selecting signal: it is revealed preference, not suppressed demand, and points away from a subscription that needs frequent use",
+      "Challenges the absence of the behavior (no newsletter sent in two years) as a selecting signal: it is revealed preference, not suppressed demand, and points away from a subscription that needs the behavior to recur",
       "Proposes selecting on evidence of a recurring job the segment is blocked from doing (thwarted demand), tied to the North Star",
       "Gates candidate segments on Moore's checklist (reachable buyer with budget, compelling reason, whole product, competition) before ranking",
       "Names exactly one beachhead plus hard disqualifiers that test the buyer's actual access to an alternative",
-      "Recommends a probe split evenly across any still-contested segments rather than declaring the winner without evidence"
+      "Recommends a probe split evenly across any still-contested segments, with the offer held constant, rather than declaring the winner without evidence"
     ]
   },
   {
@@ -82,7 +82,7 @@
       "Expresses acceptance as an eval task set with a pass threshold and regression gate, not prose",
       "The task set covers non-happy routes: missing information, low confidence, policy or rule breach, dependency failure, a fabricated entity rejected by a validator, and instructions embedded in the input treated as data",
       "Sets an autonomy level with escalation triggers that include business-rule breaches (price off rule, margin below floor), not only model confidence",
-      "Labels any synthetic task set as pre-launch only, to be replaced by real transcripts"
+      "Sources the task set from real historical/pilot cases first; any synthetic cases are labeled, fill coverage gaps only, and don't alone satisfy the release gate"
     ]
   }
 ]
