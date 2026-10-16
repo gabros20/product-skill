@@ -25,7 +25,10 @@ Produces:
 ## Shifts
 
 - **Discovery.** Validate message-market fit and positioning claims, not feature demand. Identify
-  the vertical explicitly — proof devices and register are vertical-specific, not generic.
+  the vertical explicitly — proof devices and register are vertical-specific, not generic. On a
+  redesign, frame the problem as the visitor's blocked next step — can't tell fit, get an answer,
+  get a quote, or book — not "the site looks dated"; a dated look is a symptom. The revenue
+  workflow around the site (capture, qualification, response, follow-up) is usually the real scope.
 - **Positioning.** Set the premium↔information dial per surface and scroll-depth by stakes: higher
   money/health/legal risk pushes proof-led and conservative (finance, healthcare, law); more
   lifestyle/prestige-driven allows premium-led — but proof always carries equal final weight. Apply

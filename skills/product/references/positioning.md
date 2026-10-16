@@ -66,7 +66,12 @@ is the most common positioning failure:
    exist, including "do nothing" or a manual workaround. Pull this from
    [Market](market.md)'s competitor profiles rather than re-deriving it.
 2. **Identify unique attributes** — the capabilities this product has that the alternatives above
-   genuinely lack.
+   genuinely lack, and can prove today. Keep a claim ledger (claim · status · proof source): an
+   attribute with no proof yet is a roadmap item, not a positioning asset; proof owned by someone
+   else (an employer's or partner's clients, logos, testimonials) is not this product's proof; and
+   no outcome percentage enters positioning unless it was measured on this product or carries a
+   High-tier source ([Market](market.md)). Until proof exists, position on what is verifiable —
+   method, open artifacts, a working demo — never on invented case results.
 3. **Map attributes to value** — translate each unique attribute into the value it creates for the
    customer; an attribute with no mapped value is a feature, not a positioning asset.
 4. **Identify the best-fit segment** — the customers who care the most about that value, ranked
@@ -88,6 +93,14 @@ segment:
 top-ranked Gains — and fit must be evidenced (interview or usage data from
 [Discovery](discovery.md)), never asserted by mapping every feature to every Job/Pain/Gain box just
 to fill the canvas.
+
+When the segment has not yet adopted the category at all, the top Pains are usually **adoption
+blockers**, not task pains — the Habit and Anxiety side of [Discovery](discovery.md)'s Forces of
+Progress: missing expertise, unclear return, legal or privacy uncertainty, poor data, legacy systems
+that won't connect, distrust of reliability, cost, team resistance, "we already have a generic tool."
+List each as a Pain and give it a Pain Reliever (a baseline-and-value model, a bounded pilot, an
+approval boundary, a data-readiness step); a canvas that relieves only the task pain leaves the
+reason the segment hasn't switched untouched.
 
 ### 4. JTBD value-proposition card
 
@@ -118,13 +131,44 @@ segment needs to be fully satisfied — not just the core feature set. Reuse
 [Discovery](discovery.md)'s opportunity scoring and [Market](market.md)'s competitor set to choose
 the beachhead; don't re-score segments from scratch here.
 
+**Choosing among candidate beachheads.** Moore's market-development checklist (*Crossing the
+Chasm*, "Target the Point of Attack") runs in two passes. Gate first — a segment scoring low on any
+of these is out: a reachable **target customer** with budget and authority, a **compelling reason to
+buy** now, a **whole product** deliverable soon, no **competitor** already owning the niche. Then
+rank survivors on partners and allies, distribution, pricing, positioning credibility, and the next
+target customer it unlocks. Sharpen the gate with three checks:
+- **Pain already priced.** A segment that already pays for the pain (staff hours it can count, a
+  budget line or existing contract the product can slot into) beats one that must first be convinced
+  the pain exists. A channel that is reachable — and legally usable — today counts as distribution;
+  a segment whose primary channel is gated is a later pin.
+- **The selecting signal must predict the North Star.** Pick segments by evidence of the job the
+  product needs them to keep doing, not by an easy-to-detect symptom. Absence of a behavior is
+  revealed preference, not suppressed demand: an asset nobody has touched in years shows nobody
+  wants to touch it — exactly the wrong segment for a product whose retention depends on frequent
+  use. Look for **thwarted demand** — the job recurs structurally *and* the segment is blocked from
+  doing it — which is often the mirror image of the segment the symptom points to. For a recurring
+  revenue model, the pain that closes the first sale is not the job that renews it
+  ([Business model](business-model.md)); select on the renewing job.
+- **Calibrate signals on a real sample before trusting weights.** A signal that rarely fires cannot
+  rank anyone; one nearly every candidate has belongs in the filter, not the score.
+
+Write **hard disqualifiers** alongside the beachhead: segments that look adjacent but the product
+cannot serve, or that already self-serve the job. Test the buyer's actual access to the alternative,
+not its mere presence — a tool the customer cannot or dare not use (someone else holds the seat) is
+not an alternative they have. When two beachheads stay contested after the gate, split the
+[Discovery](discovery.md) Proof-of-Life probe evenly across them so the result compares segments
+rather than validating whichever one was tried first.
+
 ## Validation
 
 - Every Moore-template slot names a real category and competitor — no placeholder text.
 - Competitive alternatives and unique attributes (§2 steps 1–2) were identified before the category
   was named (§2 step 5) — check the order, not just the presence of each step.
 - Value Proposition Canvas fit is backed by cited evidence, not asserted by exhaustive mapping.
-- Exactly one beachhead segment is named — not a list, not "everyone."
+- Exactly one beachhead segment is named — not a list, not "everyone" — with its hard
+  disqualifiers, and its selecting signal predicts the North Star behavior rather than a symptom.
+- Every unique attribute in the statement has a proof source in the claim ledger; unproven ones are
+  labeled Assumption, not stated as differentiation.
 
 ## Failure modes and handoff
 

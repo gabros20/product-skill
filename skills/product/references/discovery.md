@@ -72,7 +72,7 @@ Before building anything, run the cheapest artifact that tells the harshest trut
 
 ## Autonomous desk investigation
 
-Before or between interviews, run agent-driven desk research to pre-form hypotheses cheaply: mine public forums, review sites, support tickets, and competitor gaps for recurring complaints and workarounds (deanpeters/Product-Manager-Skills). Treat every finding as an **Inference**, not a Fact, until a Mom Test interview or a Proof-of-Life probe confirms it with a real commitment.
+Before or between interviews, run agent-driven desk research to pre-form hypotheses cheaply: mine public forums, review sites, support tickets, and competitor gaps for recurring complaints and workarounds (deanpeters/Product-Manager-Skills). Treat every finding as an **Inference**, not a Fact, until a Mom Test interview or a Proof-of-Life probe confirms it with a real commitment. Brief the investigation to attack the premise rather than confirm it ("challenge my assumption that X; don't repeat it unless the evidence supports it"), to start from the expensive failure rather than a technology looking for a use, and to preserve source, date, geography, sample, and caveat for every figure it returns — see `market.md` for how figures are recorded.
 
 ## Artifact templates
 
