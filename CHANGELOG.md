@@ -22,6 +22,7 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
   authoritative facts; simplest structure first, citing Anthropic's *Building effective agents*),
   an out-of-bounds-action failure mode, route-coverage for eval task sets, labeled synthetic sets
   pre-launch, human-only and act-with-validation autonomy edges, business-rule escalation triggers.
+  **Prioritization:** cost-side criteria as negative weights in Weighted Scoring.
   **Market:** record every figure with its frame; never splice non-comparable frames. **Metrics:**
   rates name denominator and window; rolling windows for small samples; baseline before target.
   **Risk register:** absence of failure stories is survivorship bias; red-team closes the loop with
