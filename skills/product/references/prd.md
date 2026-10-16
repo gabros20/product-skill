@@ -85,7 +85,9 @@ GTM subsections belong to siblings — link out, don't duplicate them here):
    first-class, not a footnote.
 8. **Out of Scope** — explicit `in`/`out`/`cut`, not silence. Every deferred item names the concrete
    trigger that would earn it ("a second operator exists," "volume passes what one person can
-   review"), so deferral is a decision, not a someday list. Phase the claim honestly: the MVP claims
+   review") — prefer the structural trigger over a volume proxy when the failure is structural,
+   since the collision arrives before the volume does — so deferral is a decision, not a someday
+   list. Phase the claim honestly: the MVP claims
    only the journey it runs end to end; a later phase carries explicit entry criteria (what must be
    true before it is scheduled) and exit criteria (what proves it done), never presented as
    shippable today. For a pilot or demo, add a **simulated** list — data, integrations, or
@@ -180,7 +182,10 @@ before writing acceptance criteria for any agentic feature, at any altitude.
 - Every requirement traces to a Fact/Inference/Assumption-tagged claim, not an unlabeled one.
 - Every acceptance criterion is an observable pass/fail — no "should feel fast," no adjectives
   without a number.
-- Success metrics state target + window + committed/provisional; none are bare aspirations.
+- Success metrics state baseline + target + window + committed/provisional; none are bare
+  aspirations.
+- Unverified external dependencies gate their phase; every open question has an owner and a
+  recommended default.
 - Out of Scope is explicit (`in`/`out`/`cut`), never implied by omission; every deferred item names
   the trigger that would earn it, and every later phase has entry and exit criteria.
 - An agentic feature's PRD carries an eval block, not a "handle edge cases" placeholder.

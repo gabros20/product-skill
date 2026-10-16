@@ -30,6 +30,9 @@ Produces:
 - A named best-fit segment via Dunford's method, with category as the output, not the input.
 - A Value Proposition Canvas (fit evidenced, not asserted).
 - A compact JTBD value-proposition card per segment.
+- A claim ledger backing every unique attribute with a proof source.
+- One beachhead with its hard disqualifiers — or, when contested, an even probe split across the
+  finalists.
 
 ## Contents
 
@@ -67,11 +70,12 @@ is the most common positioning failure:
    [Market](market.md)'s competitor profiles rather than re-deriving it.
 2. **Identify unique attributes** — the capabilities this product has that the alternatives above
    genuinely lack, and can prove today. Keep a claim ledger (claim · status · proof source): an
-   attribute with no proof yet is a roadmap item, not a positioning asset; proof owned by someone
-   else (an employer's or partner's clients, logos, testimonials) is not this product's proof; and
+   attribute with no proof yet is a roadmap item, not a positioning asset; proof owned by another
+   entity (a parent brand's, a reseller's, a predecessor product's customers, logos, testimonials) is
+   not this product's proof; and
    no outcome percentage enters positioning unless it was measured on this product or carries a
-   High-tier source ([Market](market.md)). Until proof exists, position on what is verifiable —
-   method, open artifacts, a working demo — never on invented case results.
+   High-tier source ([Market](market.md)). Until proof exists, position on what is verifiable — a
+   method, open artifacts, a working demo.
 3. **Map attributes to value** — translate each unique attribute into the value it creates for the
    customer; an attribute with no mapped value is a feature, not a positioning asset.
 4. **Identify the best-fit segment** — the customers who care the most about that value, ranked
@@ -98,9 +102,9 @@ When the segment has not yet adopted the category at all, the top Pains are usua
 blockers**, not task pains — the Habit and Anxiety side of [Discovery](discovery.md)'s Forces of
 Progress: missing expertise, unclear return, legal or privacy uncertainty, poor data, legacy systems
 that won't connect, distrust of reliability, cost, team resistance, "we already have a generic tool."
-List each as a Pain and give it a Pain Reliever (a baseline-and-value model, a bounded pilot, an
-approval boundary, a data-readiness step); a canvas that relieves only the task pain leaves the
-reason the segment hasn't switched untouched.
+List each as a Pain with its own Pain Reliever (a value model, a bounded pilot, an approval
+boundary, a data-readiness step) — relieving only the task pain leaves the reason the segment
+hasn't switched untouched.
 
 ### 4. JTBD value-proposition card
 
@@ -139,16 +143,17 @@ rank survivors on partners and allies, distribution, pricing, positioning credib
 target customer it unlocks. Sharpen the gate with three checks:
 - **Pain already priced.** A segment that already pays for the pain (staff hours it can count, a
   budget line or existing contract the product can slot into) beats one that must first be convinced
-  the pain exists. A channel that is reachable — and legally usable — today counts as distribution;
-  a segment whose primary channel is gated is a later pin.
+  the pain exists — and it must run enough volume for the value to be measurable at all, or neither
+  the pilot nor the renewal can prove it. A channel that is reachable — and legally usable — today
+  counts as distribution; a segment whose primary channel is gated is a later pin.
 - **The selecting signal must predict the North Star.** Pick segments by evidence of the job the
   product needs them to keep doing, not by an easy-to-detect symptom. Absence of a behavior is
   revealed preference, not suppressed demand: an asset nobody has touched in years shows nobody
-  wants to touch it — exactly the wrong segment for a product whose retention depends on frequent
-  use. Look for **thwarted demand** — the job recurs structurally *and* the segment is blocked from
-  doing it — which is often the mirror image of the segment the symptom points to. For a recurring
-  revenue model, the pain that closes the first sale is not the job that renews it
-  ([Business model](business-model.md)); select on the renewing job.
+  wants to touch it — the wrong segment when retention needs frequent use. Look for **thwarted
+  demand** — the job recurs structurally *and* the segment is blocked from doing it — often the
+  mirror image of the symptom's segment. For a recurring revenue model, the pain that closes the
+  first sale is not the job that renews it ([Business model](business-model.md)); select on the
+  renewing job.
 - **Calibrate signals on a real sample before trusting weights.** A signal that rarely fires cannot
   rank anyone; one nearly every candidate has belongs in the filter, not the score.
 
@@ -157,7 +162,8 @@ cannot serve, or that already self-serve the job. Test the buyer's actual access
 not its mere presence — a tool the customer cannot or dare not use (someone else holds the seat) is
 not an alternative they have. When two beachheads stay contested after the gate, split the
 [Discovery](discovery.md) Proof-of-Life probe evenly across them so the result compares segments
-rather than validating whichever one was tried first.
+rather than validating whichever one was tried first — and hold the offer and asset constant across
+the split, or an asset effect masquerades as segment fit.
 
 ## Validation
 

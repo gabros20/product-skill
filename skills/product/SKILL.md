@@ -47,7 +47,7 @@ automatically unless the user requested a composition workflow.
 |---|---|---|
 | Discover the problem, talk to users, synthesize research | [Discovery](references/discovery.md) | Opportunity Solution Tree, interview plan/synthesis, validated problem, JTBD |
 | Set product vision and strategy | [Strategy](references/strategy.md) | Strategy kernel, vision, principles, Lean Canvas |
-| Position the product and define its value proposition | [Positioning](references/positioning.md) | Positioning statement, value-proposition canvas, beachhead selection with disqualifiers, proof-backed claim ledger |
+| Position the product and define its value proposition | [Positioning](references/positioning.md) | Positioning statement, value-proposition canvas, beachhead (segment/audience) selection with disqualifiers, proof-backed claim ledger |
 | Model the business and price it | [Business model](references/business-model.md) | Business Model Canvas, economic-value (ROI) model, pricing hypotheses (value-based, tiers, Van Westendorp), dunning/billing-failure recovery (involuntary churn) |
 | Size the market and analyze competitors | [Market](references/market.md) | TAM/SAM/SOM with source-calibrated confidence, competitor profiles, landscape |
 | Write the PRD, spec, or acceptance criteria | [PRD](references/prd.md) | Altitude-flexed PRD (1-pager ↔ full ↔ machine-readable), Given/When/Then criteria, user/job stories |

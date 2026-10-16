@@ -56,11 +56,11 @@ one framework up front; run every framework the inputs support, then compare.
 Gate each framework by input availability before running it — don't default to one. RICE without
 numbers: offer an estimation scaffold, or fall back to ICE and say so. Kano is excluded by default;
 unlock it only when customer research (a paired survey) exists, and state exactly what's missing
-rather than running it on guesses. Weighted Scoring from a single stakeholder isn't weighted
-scoring — it's one person's opinion with decimals; redirect to ICE/RICE. Equal-weighting in
-Weighted Scoring is itself a choice — flag it, don't let it pass silently as neutral. Put the cost side in
-the criteria too — build complexity, dependence on data the team can't access — as negative weights;
-a criteria set that scores only upside ranks the most ambitious bet first.
+rather than running it on guesses. Weighted Scoring from a single stakeholder isn't weighted scoring
+— it's one person's opinion with decimals; redirect to ICE/RICE. Equal-weighting in Weighted Scoring
+is itself a choice — flag it, don't let it pass silently as neutral. Put the cost side in the
+criteria too — build complexity, dependence on data the team can't access — as negative weights; a
+criteria set that scores only upside ranks the most ambitious bet first.
 
 ## Divergence is the finding
 

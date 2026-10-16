@@ -15,13 +15,13 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
   not suppressed demand), sample calibration of signals, access-based hard disqualifiers, and an
   even probe split across contested segments. **Business model:** prerequisites & cost-shape sheet
   behind any near-zero-cost claim; recurring revenue needs a recurring job; a baseline-first
-  economic-value model (Nagle & Müller EVE) bounding the WTP ceiling; a revenue-stream ladder for
-  high-risk purchases. **PRD:** baseline in success metrics, trigger-named deferrals, phase
+  economic-value model (Nagle & Müller EVE) bounding the WTP ceiling; limited-first revenue streams
+  for high-risk purchases (Rogers' trialability/observability, rung sequence labeled Inference). **PRD:** baseline in success metrics, trigger-named deferrals, phase
   entry/exit criteria, a simulated list for pilots, unverified dependencies as phase gates, open
   questions with recommended defaults. **Agentic:** deterministic/model split (the model never owns
   authoritative facts; simplest structure first, citing Anthropic's *Building effective agents*),
-  an out-of-bounds-action failure mode, route-coverage for eval task sets, labeled synthetic sets
-  pre-launch, human-only and act-with-validation autonomy edges, business-rule escalation triggers.
+  an out-of-bounds-action failure mode, route-coverage for eval task sets, real-first task-set sourcing
+  (synthetic cases only fill labeled coverage gaps and never pass the release gate alone), human-only and act-with-validation autonomy edges, business-rule escalation triggers.
   **Prioritization:** cost-side criteria as negative weights in Weighted Scoring.
   **Market:** record every figure with its frame; never splice non-comparable frames. **Metrics:**
   rates name denominator and window; rolling windows for small samples; baseline before target.
@@ -29,6 +29,9 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
   a review changelog. **Discovery / website / internal:** premise-challenging desk briefs, the
   visitor's blocked next step as the website problem, and unofficial-system probes for internal
   tools. Router rows and two output evals updated to reach the new behavior.
+  `surface-agentic.md` now sits above the 2,500-token review threshold (it was 2,588 before the
+  fold); the overshoot was reviewed and accepted, since eval design and autonomy belong in this
+  overlay.
 
 ## [0.1.2] — 2026-07-27
 
