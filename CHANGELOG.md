@@ -8,7 +8,26 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 ## [Unreleased]
 
 ### Added
-- Queue unreleased changes here.
+- Practitioner-knowledge fold into existing sections (no new references). **Positioning:** a
+  proof-backed claim ledger for unique attributes; adoption blockers as Value Proposition Canvas
+  Pains; beachhead selection through Moore's two-pass market-development checklist, sharpened with
+  pain-already-priced, selecting-signal-must-predict-the-North-Star (decay is revealed preference,
+  not suppressed demand), sample calibration of signals, access-based hard disqualifiers, and an
+  even probe split across contested segments. **Business model:** prerequisites & cost-shape sheet
+  behind any near-zero-cost claim; recurring revenue needs a recurring job; a baseline-first
+  economic-value model (Nagle & Müller EVE) bounding the WTP ceiling; a revenue-stream ladder for
+  high-risk purchases. **PRD:** baseline in success metrics, trigger-named deferrals, phase
+  entry/exit criteria, a simulated list for pilots, unverified dependencies as phase gates, open
+  questions with recommended defaults. **Agentic:** deterministic/model split (the model never owns
+  authoritative facts; simplest structure first, citing Anthropic's *Building effective agents*),
+  an out-of-bounds-action failure mode, route-coverage for eval task sets, labeled synthetic sets
+  pre-launch, human-only and act-with-validation autonomy edges, business-rule escalation triggers.
+  **Market:** record every figure with its frame; never splice non-comparable frames. **Metrics:**
+  rates name denominator and window; rolling windows for small samples; baseline before target.
+  **Risk register:** absence of failure stories is survivorship bias; red-team closes the loop with
+  a review changelog. **Discovery / website / internal:** premise-challenging desk briefs, the
+  visitor's blocked next step as the website problem, and unofficial-system probes for internal
+  tools. Router rows and two output evals updated to reach the new behavior.
 
 ## [0.1.2] — 2026-07-27
 
