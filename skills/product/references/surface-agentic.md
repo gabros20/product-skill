@@ -50,12 +50,18 @@ the model, not a spec engineering commits to in advance. Discovery must therefor
 *before* trusting a desirability interview: "yes, I'd want an agent to do X" is worthless if no model
 clears a usable success rate at X. Run the cheapest capability probe (a scripted prompt against a
 representative task sample, hand-graded) before spending budget on demand validation — near-zero
-capability means no demand evidence rescues the opportunity.
+capability means no demand evidence rescues the opportunity. Start from the expensive business
+failure, never from "where can we add AI?"
 
 ## 2. Capability & failure-mode mapping
 
-Map every job the agent performs to a **capability tier** and a **failure-mode set** before writing
-a PRD line:
+First split each job into **deterministic** and model parts. The model never owns authoritative
+facts — prices, balances, stock, availability, permissions, contract terms, money movement come
+from the system of record and business rules; the model interprets, extracts, classifies, drafts,
+and routes. Use the simplest structure that clears the job — "only increasing complexity when
+needed" (Anthropic, *Building effective agents*, 2024 —
+https://www.anthropic.com/engineering/building-effective-agents). Then map every model-owned job to a
+**capability tier** and a **failure-mode set** before writing a PRD line:
 
 | Tier | Definition | Implication |
 |---|---|---|
@@ -71,6 +77,8 @@ the acceptance bar, the autonomy level, and the risk register:
 - **Silent error** — fails without surfacing it; worse than a visible error since nothing prompts a check.
 - **Latency spikes** — retries or long tool chains occasionally break the interaction model the UX assumed.
 - **Context poisoning/drift** — a long-running agent's state degrades as wrong context accumulates.
+- **Out-of-bounds action** — the agent acts twice on a retry, past its authorization, or with more
+  autonomy than the job's level (§4) allows.
 
 Every mapped failure mode lands either in the eval set (§3) as a case designed to catch it, or the
 risk register (§5) — an unmapped failure mode is an unmodeled risk, not an acceptable gap.
@@ -87,7 +95,9 @@ Template (adapts the `ai-evals` fenced-block shape from `gokulrajaram/ProductSpe
 ```
 id: EVAL-<n>
 job: <the job this eval gates>
-task_set: <n representative cases, sourced from real usage/pilot transcripts, not invented>
+task_set: <n representative cases from real usage/pilot transcripts, not invented; pre-launch only,
+  a labeled synthetic set (normal/ambiguous/missing/duplicate/conflicting/adversarial), replaced
+  by real transcripts once pilot traffic exists>
 success_definition: <pass criteria — cite the §2 failure modes this eval must catch>
 evaluator: exact_match | llm_judge | human_review | tool-trace_check
 pass_threshold: <e.g. 90% of task_set, or 0 hallucination-flagged cases out of n>
@@ -98,7 +108,11 @@ regression_gate: <release blocked if pass_threshold regresses vs the last commit
 
 Hold this distinction: **eval thresholds that gate a release live in acceptance criteria (pre-launch,
 pass/fail), not success metrics (post-launch, outcome tracking)** — the same score can feed both,
-but conflating them lets a team ship on a metric that was never actually a gate. `llm_judge` (a
+but conflating them lets a team ship on a metric that was never actually a gate. A happy-path-only
+task set is not done: cover every route — confident-correct (proceeds), missing info (asks), low
+confidence (escalates), policy violation (blocked), dependency failure (falls back), fabricated
+entity (validator rejects), instructions inside input content (treated as data), sensitive data
+(redacted), no supported answer (says so). `llm_judge` (a
 second model grading the first) is the default where exact-match is too brittle — but the judge has
 its own failure modes; state its known error rate, don't treat its verdict as ground truth. The `ai`
 skill implements the evaluator and harness; this reference owns the task set, success definition, and
@@ -116,8 +130,13 @@ Choose an autonomy level per job, never one blanket level for the whole product,
 | Act-with-approval | Executes after one explicit confirmation | Reliable tier, reversible or low-blast-radius, user still wants a checkpoint |
 | Act | Executes with no per-action confirmation | Reliable tier, reversible, low blast radius, fast escalation path |
 
+Two edges sit outside the table: **human-only** (legal determinations, irreversible financial
+decisions, safety-critical instructions — the agent gathers context, never states the conclusion)
+and **act-with-validation** (a low-risk action gated by a deterministic check instead of a person).
+
 Define the **escalation path** alongside the level: what triggers hand-off to a human (low
-confidence, a flagged failure mode, a threshold breach), who receives it, what the user sees while
+confidence, a flagged failure mode, a threshold breach, or a business-rule breach — a price off
+rule, a margin under its floor, a disputed item, a strategic account), who receives it, what the user sees while
 waiting. A level with no escalation path is incomplete — it promises action with no stated recovery
 when the action is wrong.
 
@@ -174,6 +193,8 @@ pass-rate, latency, and cost as Impact/Effort inputs (§7).
 
 ## Validation
 
+- Every job states its deterministic/model split (§2) — no authoritative fact is model-owned — and
+  the eval task set covers every route (§3), not only the happy path.
 - Every job has a stated capability tier (§2) with named failure modes, each mapped to an eval case
   or a risk-register entry.
 - PRD acceptance criteria include the eval-set template (§3) with an explicit pass threshold and
