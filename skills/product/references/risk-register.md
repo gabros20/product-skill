@@ -66,6 +66,10 @@ Grade every piece of supporting evidence (verbatim tiers):
 - **Medium:** repeated unsolicited requests, competitor traction in the exact wedge, a manual workaround the user already maintains.
 - **Strong:** real files/data handed over, booked calls, a preorder or deposit, repeated manual use, switching away from a paid alternative.
 
+Absence of evidence is not an evidence tier: a lack of public failure stories about an approach is
+survivorship bias (failures rarely publish), not proof of safety — treat it as a reason to be more
+conservative, never as a Medium or Strong entry.
+
 Never let a Weak-tier entry justify an L3/L4 verdict; the ladder and the hierarchy must agree before a "Build small" verdict is issued.
 
 ## The four-verdict contract
@@ -83,6 +87,7 @@ Run this pass on a completed `strategy.md` or `prd.md` before sign-off (phuryn/p
 2. **Attack** — a second pass (or a second agent) attacks every pillar for the weakest assumption, the most likely competitive response, and the resource or timing risk most likely to break it.
 3. **Rank** — score each attack by **impact × likelihood × cheapness-to-test**; cheap-to-test-and-high-impact items go to `discovery.md` as experiments immediately, not to the backlog.
 4. **Kill-criteria** — for the top-ranked risks, write the explicit condition under which the team would abandon or pivot the strategy, decided now, before commitment bias sets in.
+5. **Close the loop** — revise the artifact in place and keep a review changelog: each adopted attack → the section it changed; each rejected attack → why. A red-team whose findings can't be traced to a change (or a stated rejection) didn't happen.
 
 ## Pre-mortem
 

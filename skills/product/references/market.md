@@ -80,6 +80,14 @@ numbers Low:
 - Flag hand-wavy sources (an uncited blog post, a single tweet) as Low confidence plus an explicit
   assumption, never silently absorbed as fact.
 
+**Record every figure with its frame** — claim · source · publisher · publication date · geography ·
+sample definition (population, firm-size cutoff, how the metric is defined) · caveat · last-verified
+date. Then hold three rules: never splice figures from non-comparable frames (a national
+small-business survey and a regional enterprise survey with a different size cutoff) into one
+range or one synthetic rate — cite each as a separate signal; never read causation from an
+observational survey; and re-verify at the primary source before any figure goes into
+customer-facing material.
+
 ### 2. Competitive / landscape analysis
 
 **Competitor profiles** — for each named competitor: what job it does, pricing model, target

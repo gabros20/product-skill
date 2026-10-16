@@ -87,6 +87,13 @@ Analytics*): **comparative** (meaningful across time, cohorts, or segments), **u
 rate" is a rate), and **behavior-changing** (a mover changes what the team does next). Failing any of
 the four makes it a reporting number, not a working one — keep it out of the active 5–7.
 
+A rate is only defined once it names its **denominator** (unique entities — prospects, accounts,
+users — not events, which double-count) and its **window** (an attribution window, with late events
+assigned by event time). When a weekly sample is too small to read, define the metric on a rolling
+window of the last *n* entities instead of per week — a per-week rate on a handful of cases is noise
+that will trigger false alarms. And measure the baseline before setting a target: a target with no
+baseline can't say whether the change moved anything.
+
 ## OKRs as outcome targets
 
 Once the tree exists, use OKRs (Doerr, *Measure What Matters*) to target it for a cycle: one
@@ -109,7 +116,8 @@ success metrics — is in `surface-agentic.md`; add that overlay rather than res
 Before calling the metric set done: the North Star passes the three selection questions; the active
 tree has ≤5–7 metrics, every leaf a controllable lever, not an abstraction; every optimized metric
 has a named counter-metric; every metric passes at least three of the four Lean Analytics criteria;
-every committed Key Result maps to a leaf lever, and every aspirational one is graded on the 0.6–0.7
+every rate names its denominator and window, every target its baseline; every committed Key Result
+maps to a leaf lever, and every aspirational one is graded on the 0.6–0.7
 band, not 1.0.
 
 Common failures: revenue or a vanity count as North Star; a tree with no counter-metrics; a Key

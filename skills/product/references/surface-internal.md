@@ -26,7 +26,11 @@ Produces:
 
 - **Discovery.** Interview both the stakeholder who commissions the tool and the worker who operates
   it daily — their success definitions diverge (stakeholder wants throughput/compliance; user wants
-  less friction). Map the existing workaround before proposing a replacement.
+  less friction). Map the existing workaround before proposing a replacement. Probe for the unofficial system:
+  which inbox acts as a workflow engine, which spreadsheet is operationally critical, what gets
+  copied between systems, where one person is the bottleneck, which task creates a recurring
+  backlog — and what must never happen automatically, which data is sensitive, and which decisions
+  need a named accountable human.
 - **Strategy.** There is no market to win — the "competitor" is the status quo workflow and the cost
   of not building it. Frame the strategy kernel around operational risk and cost, not market share.
 - **Prioritization.** Rank by operational cost avoided, hours saved, or error/compliance risk

@@ -27,11 +27,13 @@ Produces:
 - A pricing hypothesis: value metric, willingness-to-pay (WTP) bands, a chosen psychological
   tier structure, and the confidence/evidence behind each — never a single "sticker" price asserted
   as fact.
+- An economic-value model (baseline-first, scenario-ranged) that bounds the WTP ceiling.
 
 ## Contents
 
 - Business Model Canvas (Osterwalder)
-- Pricing hypothesis (value-based method, Van Westendorp, tier psychology)
+- Pricing hypothesis (value-based method, economic-value model, revenue-stream ladder, Van
+  Westendorp, tier psychology)
 - Dunning and billing-failure recovery (involuntary churn)
 - Validation
 - Failure modes and handoff
@@ -58,6 +60,19 @@ Each block is one paragraph, evidence-tagged (Fact/Inference/Assumption):
 A block with no evidence and no stated assumption is an unmodeled risk — route it to
 [risk-register](risk-register.md) rather than leaving it implicit.
 
+Two blocks fail most often by optimism:
+- **Cost structure — "near-zero marginal cost" is not "free."** A cheap unit (a subscription that
+  makes inference look free, a free tier) says nothing about the cost of reaching the first customer.
+  Back any such claim with a **prerequisites & cost-shape sheet** — every account, paid API, domain,
+  hosting plan, compliance step, and hour of operator time the model needs, each with its cost shape
+  (flat, usage-billed, per-seat, time) — and state the honest date of first value when a
+  prerequisite carries lead time (warm-up, approval, integration access), rather than implying a
+  straight run to the first success metric.
+- **Revenue streams — recurring revenue needs a recurring job.** The pain that closes the first sale
+  (a one-time fix) is often not the job that keeps the customer paying. A subscription is viable
+  only for a segment whose job recurs; if the selected segment's job doesn't, the model is a
+  project, priced as one — or the segment changes ([Positioning](positioning.md) §5).
+
 ### 2. Pricing hypothesis
 
 **Value-based pricing method** (the default starting method — anchor on value delivered, not cost
@@ -76,6 +91,26 @@ or competitor price):
 5. Slice the value metric and feature set into **three tiers** mapped to the three bands.
 6. Name one expansion lever (usage overage, add-on, seat growth) as a secondary revenue path — not
    the primary hypothesis.
+
+**Economic-value model** (sets the WTP ceiling in step 3 — Nagle & Müller, *The Strategy and Tactics
+of Pricing*: economic value = **reference value**, the price of the best alternative, +
+**differentiation value**, what this product adds or saves beyond it). Measure the customer's
+**baseline** before discussing the solution, then quantify the differentiation value with the
+model that fits the outcome:
+- Time saved: tasks/month × minutes saved per task ÷ 60 × loaded hourly cost × 12.
+- Revenue recovered: missed opportunities/month × recoverable share × average deal value × 12.
+- Conversion lift: qualified opportunities × conversion-rate improvement × gross profit per sale.
+
+Keep customer-supplied inputs separate from external benchmarks, show conservative / base / upside
+scenarios with break-even time, and leave every assumption visible — a scenario model with hidden
+assumptions is fake ROI, and a demo's result is never a promised return.
+
+**Revenue-stream ladder for high-risk purchases.** When the buyer faces a large, unfamiliar
+commitment (a new category, a high-ticket build), don't make the first sale the whole thing.
+Structure revenue streams as a ladder — paid diagnostic → fixed-scope pilot on one workflow →
+production → recurring optimization — where each rung is small enough to buy on its own and
+produces the evidence (a baseline, a measured pilot result) that sells the next. It is the
+[risk-register](risk-register.md) "Build small" verdict applied to the customer's purchase.
 
 **Van Westendorp price-sensitivity** (validate the hypothesis against real respondents, when
 research capacity exists): ask each respondent four prices — too cheap (quality doubt), cheap (a
@@ -124,7 +159,9 @@ platform's own billing retry applies — do not design a custom dunning cadence 
 
 - Every BMC block is filled or explicitly flagged as an assumption with an owner.
 - The pricing hypothesis names a value metric, at minimum a floor/ceiling WTP band with stated
-  evidence quality, and a tier structure — not a single unexplained number.
+  evidence quality, and a tier structure — not a single unexplained number. The ceiling traces to
+  an economic-value model with a measured or explicitly assumed baseline.
+- Any low- or zero-marginal-cost claim is backed by a prerequisites & cost-shape sheet.
 - Every unvalidated pricing or business-model assumption has a corresponding
   [risk-register](risk-register.md) entry.
 - If billing is recurring, the dunning rule (§3: retry schedule, grace period, churn cut-over) is

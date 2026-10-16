@@ -77,13 +77,24 @@ GTM subsections belong to siblings — link out, don't duplicate them here):
    `metrics.md`).
 5. **Solution** — the approach at a product level; UX detail is `design`'s, technical detail is
    `architecture`'s.
-6. **Success Metrics** — target + window + committed/provisional (see Machine-readable spec below).
+6. **Success Metrics** — baseline + target + window + committed/provisional (see Machine-readable
+   spec below); a target with no measured baseline is a guess. When a prerequisite carries lead time
+   (an approval, a warm-up, an integration), state the honest date of first value.
 7. **Stories & Requirements** — P0/P1/P2, each requirement backed by acceptance criteria;
    non-functional requirements (performance, security, scale, accessibility, platforms) are
    first-class, not a footnote.
-8. **Out of Scope** — explicit `in`/`out`/`cut`, not silence.
-9. **Dependencies & Risks** — High/Medium + mitigation; open items feed `risk-register.md`.
-10. **Open Questions** — each with an owner.
+8. **Out of Scope** — explicit `in`/`out`/`cut`, not silence. Every deferred item names the concrete
+   trigger that would earn it ("a second operator exists," "volume passes what one person can
+   review"), so deferral is a decision, not a someday list. Phase the claim honestly: the MVP claims
+   only the journey it runs end to end; a later phase carries explicit entry criteria (what must be
+   true before it is scheduled) and exit criteria (what proves it done), never presented as
+   shippable today. For a pilot or demo, add a **simulated** list — data, integrations, or
+   approvals faked here that production must replace.
+9. **Dependencies & Risks** — High/Medium + mitigation; open items feed `risk-register.md`. An
+   unverified external dependency (an API, a partner's capability, a legal basis) is a **gate** on
+   the phase that needs it — verify before scheduling — not a risk row the phase ships around.
+10. **Open Questions** — each with an owner and a recommended default, so an unanswered question
+    doesn't block the decisions around it.
 
 ## Machine-readable spec
 
@@ -170,7 +181,8 @@ before writing acceptance criteria for any agentic feature, at any altitude.
 - Every acceptance criterion is an observable pass/fail — no "should feel fast," no adjectives
   without a number.
 - Success metrics state target + window + committed/provisional; none are bare aspirations.
-- Out of Scope is explicit (`in`/`out`/`cut`), never implied by omission.
+- Out of Scope is explicit (`in`/`out`/`cut`), never implied by omission; every deferred item names
+  the trigger that would earn it, and every later phase has entry and exit criteria.
 - An agentic feature's PRD carries an eval block, not a "handle edge cases" placeholder.
 
 ## Failure modes and handoff
