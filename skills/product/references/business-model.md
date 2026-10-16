@@ -107,12 +107,12 @@ scenarios with break-even time, and leave every assumption visible — a scenari
 assumptions is fake ROI, and a demo's result is never a promised return.
 
 **Revenue streams for high-risk purchases.** Everett Rogers, *Diffusion of Innovations*: adoption
-rises with **trialability** (it can be tried on a limited basis) and **observability** (its
-results are visible). When the buyer faces a large, unfamiliar commitment ([Positioning](positioning.md)
-§3 adoption blockers), offer a limited first purchase and make each step produce visible evidence
-(a baseline, a pilot result) that sells the next. *Inference*, for products sold with
-implementation: paid diagnostic → fixed-scope pilot → production → recurring optimization is one
-such sequence — a revenue assumption to validate like any other.
+rises with **trialability** (it can be tried on a limited basis) and **observability** (its results
+are visible to others). When the buyer faces a large, unfamiliar commitment
+([Positioning](positioning.md) §3 adoption blockers), offer a limited first purchase and make each
+step produce visible evidence (a baseline, a pilot result) that sells the next. *Inference*, for
+products sold with implementation: paid diagnostic → fixed-scope pilot → production → recurring
+optimization is one such sequence — a revenue assumption to validate like any other.
 
 **Van Westendorp price-sensitivity** (validate the hypothesis against real respondents, when
 research capacity exists): ask each respondent four prices — too cheap (quality doubt), cheap (a

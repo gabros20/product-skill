@@ -80,7 +80,7 @@
     "assertions": [
       "Splits the job into deterministic parts (pricing, discounts, margin floors, stock, customer identity, permissions) and model parts (extraction, matching, drafting), with no authoritative fact owned by the model",
       "Expresses acceptance as an eval task set with a pass threshold and regression gate, not prose",
-      "The task set covers non-happy routes: missing information, low confidence, policy or rule breach, dependency failure, a fabricated entity rejected by a validator, and instructions embedded in the input treated as data",
+      "The task set covers non-happy routes: missing information, low confidence, policy or rule breach, dependency failure, and no supported answer, plus a case for each mapped failure mode (e.g. hallucination) and guardrail (e.g. prompt-injection resistance)",
       "Sets an autonomy level with escalation triggers that include business-rule breaches (price off rule, margin below floor), not only model confidence",
       "Sources the task set from real historical/pilot cases first; any synthetic cases are labeled, fill coverage gaps only, and don't alone satisfy the release gate"
     ]

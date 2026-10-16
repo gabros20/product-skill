@@ -87,11 +87,10 @@ GTM subsections belong to siblings — link out, don't duplicate them here):
    trigger that would earn it ("a second operator exists," "volume passes what one person can
    review") — prefer the structural trigger over a volume proxy when the failure is structural,
    since the collision arrives before the volume does — so deferral is a decision, not a someday
-   list. Phase the claim honestly: the MVP claims
-   only the journey it runs end to end; a later phase carries explicit entry criteria (what must be
-   true before it is scheduled) and exit criteria (what proves it done), never presented as
-   shippable today. For a pilot or demo, add a **simulated** list — data, integrations, or
-   approvals faked here that production must replace.
+   list. Phase the claim honestly: the MVP claims only the journey it runs end to end; a later phase
+   carries explicit entry criteria (what must be true before it is scheduled) and exit criteria
+   (what proves it done), never presented as shippable today. For a pilot or demo, add a
+   **simulated** list — data, integrations, or approvals faked here that production must replace.
 9. **Dependencies & Risks** — High/Medium + mitigation; open items feed `risk-register.md`. An
    unverified external dependency (an API, a partner's capability, a legal basis) is a **gate** on
    the phase that needs it — verify before scheduling — not a risk row the phase ships around.

@@ -71,11 +71,10 @@ is the most common positioning failure:
 2. **Identify unique attributes** — the capabilities this product has that the alternatives above
    genuinely lack, and can prove today. Keep a claim ledger (claim · status · proof source): an
    attribute with no proof yet is a roadmap item, not a positioning asset; proof owned by another
-   entity (a parent brand's, a reseller's, a predecessor product's customers, logos, testimonials) is
-   not this product's proof; and
-   no outcome percentage enters positioning unless it was measured on this product or carries a
-   High-tier source ([Market](market.md)). Until proof exists, position on what is verifiable — a
-   method, open artifacts, a working demo.
+   entity (a parent brand's, a reseller's, a predecessor product's customers, logos, testimonials)
+   is not this product's proof; and no outcome percentage enters positioning unless it was measured
+   on this product or carries a High-tier source ([Market](market.md)). Until proof exists, position
+   on what is verifiable — a method, open artifacts, a working demo.
 3. **Map attributes to value** — translate each unique attribute into the value it creates for the
    customer; an attribute with no mapped value is a feature, not a positioning asset.
 4. **Identify the best-fit segment** — the customers who care the most about that value, ranked
