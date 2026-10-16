@@ -32,8 +32,8 @@ Produces:
 ## Contents
 
 - Business Model Canvas (Osterwalder)
-- Pricing hypothesis (value-based method, economic-value model, revenue-stream ladder, Van
-  Westendorp, tier psychology)
+- Pricing hypothesis (value-based method, economic-value model, revenue streams for high-risk
+  purchases, Van Westendorp, tier psychology)
 - Dunning and billing-failure recovery (involuntary churn)
 - Validation
 - Failure modes and handoff
@@ -66,8 +66,7 @@ Two blocks fail most often by optimism:
   Back any such claim with a **prerequisites & cost-shape sheet** — every account, paid API, domain,
   hosting plan, compliance step, and hour of operator time the model needs, each with its cost shape
   (flat, usage-billed, per-seat, time) — and state the honest date of first value when a
-  prerequisite carries lead time (warm-up, approval, integration access), rather than implying a
-  straight run to the first success metric.
+  prerequisite carries lead time (warm-up, approval, integration access).
 - **Revenue streams — recurring revenue needs a recurring job.** The pain that closes the first sale
   (a one-time fix) is often not the job that keeps the customer paying. A subscription is viable
   only for a segment whose job recurs; if the selected segment's job doesn't, the model is a
@@ -95,22 +94,25 @@ or competitor price):
 **Economic-value model** (sets the WTP ceiling in step 3 — Nagle & Müller, *The Strategy and Tactics
 of Pricing*: economic value = **reference value**, the price of the best alternative, +
 **differentiation value**, what this product adds or saves beyond it). Measure the customer's
-**baseline** before discussing the solution, then quantify the differentiation value with the
-model that fits the outcome:
+**baseline** before discussing the solution, then quantify the differentiation value. Simple
+annual instantiations, valued at what the customer keeps (profit, not revenue):
 - Time saved: tasks/month × minutes saved per task ÷ 60 × loaded hourly cost × 12.
-- Revenue recovered: missed opportunities/month × recoverable share × average deal value × 12.
-- Conversion lift: qualified opportunities × conversion-rate improvement × gross profit per sale.
+- Revenue recovered: missed opportunities/month × recoverable share × average gross profit per
+  recovered deal × 12.
+- Conversion lift: qualified opportunities/month × conversion-rate improvement × average gross
+  profit per sale × 12.
 
 Keep customer-supplied inputs separate from external benchmarks, show conservative / base / upside
 scenarios with break-even time, and leave every assumption visible — a scenario model with hidden
 assumptions is fake ROI, and a demo's result is never a promised return.
 
-**Revenue-stream ladder for high-risk purchases.** When the buyer faces a large, unfamiliar
-commitment (a new category, a high-ticket build), don't make the first sale the whole thing.
-Structure revenue streams as a ladder — paid diagnostic → fixed-scope pilot on one workflow →
-production → recurring optimization — where each rung is small enough to buy on its own and
-produces the evidence (a baseline, a measured pilot result) that sells the next. It is the
-[risk-register](risk-register.md) "Build small" verdict applied to the customer's purchase.
+**Revenue streams for high-risk purchases.** Everett Rogers, *Diffusion of Innovations*: adoption
+rises with **trialability** (it can be tried on a limited basis) and **observability** (its
+results are visible). When the buyer faces a large, unfamiliar commitment ([Positioning](positioning.md)
+§3 adoption blockers), offer a limited first purchase and make each step produce visible evidence
+(a baseline, a pilot result) that sells the next. *Inference*, for products sold with
+implementation: paid diagnostic → fixed-scope pilot → production → recurring optimization is one
+such sequence — a revenue assumption to validate like any other.
 
 **Van Westendorp price-sensitivity** (validate the hypothesis against real respondents, when
 research capacity exists): ask each respondent four prices — too cheap (quality doubt), cheap (a
