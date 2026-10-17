@@ -151,11 +151,12 @@ Route each to the risk register with the same rigor as a market or demand risk:
   tolerates before the job needs async, a progress state, or a smaller model.
 - **Cost per successful task**, not per call — a cheap call retried three times costs more than one
   expensive call that succeeds; price the job, not the token. Failed and abandoned attempts stay in
-  the numerator (all attempt spend ÷ accepted tasks); budget and price each workload class — chat,
-  research, code/browser, multi-agent — apart: Anthropic reports agents at ~4× and multi-agent
-  systems at ~15× a chat's tokens in its own data (vendor-reported, 2025 —
-  https://www.anthropic.com/engineering/multi-agent-research-system). No unlimited-agent promise
-  until tail cost is measured; one paid workflow before broader autonomy.
+  the numerator (all attempt spend ÷ accepted tasks, and per active customer); budget and price
+  each workload class — chat, research, code/browser, multi-agent — apart: agents use ~4× and
+  multi-agent systems ~15× a chat's tokens in Anthropic's own data (Anthropic, *How we built our
+  multi-agent research system*, 2025 — https://www.anthropic.com/engineering/multi-agent-research-system;
+  vendor-reported). No unlimited-agent promise until tail cost is measured; one paid workflow
+  before broader autonomy.
 - **Guardrail/policy needs** — what the agent must never do regardless of the ask (prompt-injection
   resistance, tool-allowlisting, output filtering) — required scope, not hardening polish.
 - **Degradation & fallback** — behavior when the model is unavailable or degraded: deterministic
