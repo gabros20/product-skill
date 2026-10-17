@@ -7,6 +7,11 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 
 ## [Unreleased]
 
+### Added
+- Queue unreleased changes here.
+
+## [0.3.1] — 2026-10-17
+
 ### Fixed
 - `surface-agentic` cost risk: no unlimited-agent promise until tail cost per user is measured,
   and a bounded allowance offered instead, so the rule says what to sell as well as what not to.
@@ -80,6 +85,7 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
   eval-as-acceptance-criteria — as the differentiator. 15 references, a `handoff.yaml` contract
   into `design`/`architecture`, and activation/traversal/output/compression evals.
 
+[0.3.1]: https://github.com/gabros20/product-skill/releases/tag/v0.3.1
 [0.3.0]: https://github.com/gabros20/product-skill/releases/tag/v0.3.0
 [0.2.0]: https://github.com/gabros20/product-skill/releases/tag/v0.2.0
 [0.1.2]: https://github.com/gabros20/product-skill/releases/tag/v0.1.2
