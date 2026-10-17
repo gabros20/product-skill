@@ -8,6 +8,11 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 ## [Unreleased]
 
 ### Added
+- Queue unreleased changes here.
+
+## [0.2.0] — 2026-10-17
+
+### Added
 - Practitioner-knowledge fold into existing sections (no new references). **Positioning:** a
   proof-backed claim ledger for unique attributes; adoption blockers as Value Proposition Canvas
   Pains; beachhead selection through Moore's two-pass market-development checklist, sharpened with
@@ -64,6 +69,7 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
   eval-as-acceptance-criteria — as the differentiator. 15 references, a `handoff.yaml` contract
   into `design`/`architecture`, and activation/traversal/output/compression evals.
 
+[0.2.0]: https://github.com/gabros20/product-skill/releases/tag/v0.2.0
 [0.1.2]: https://github.com/gabros20/product-skill/releases/tag/v0.1.2
 [0.1.1]: https://github.com/gabros20/product-skill/releases/tag/v0.1.1
 [0.1.0]: https://github.com/gabros20/product-skill/releases/tag/v0.1.0
