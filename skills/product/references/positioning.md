@@ -142,9 +142,9 @@ rank survivors on partners and allies, distribution, pricing, positioning credib
 target customer it unlocks. Sharpen the gate with three checks:
 - **Pain already priced.** A segment that already pays for the pain (staff hours it can count, a
   budget line or existing contract the product can slot into) beats one that must first be convinced
-  the pain exists — and it must run enough volume for the value to be measurable at all, or neither
-  the pilot nor the renewal can prove it. A channel that is reachable — and legally usable — today
-  counts as distribution; a segment whose primary channel is gated is a later pin.
+  the pain exists — with enough volume for the value to be measurable at all. A channel that is
+  reachable — and legally usable — today counts as distribution; a segment whose primary channel is
+  gated is a later pin.
 - **The selecting signal must predict the North Star.** Pick segments by evidence of the job the
   product needs them to keep doing, not by an easy-to-detect symptom. Absence of a behavior is
   revealed preference, not suppressed demand: an asset nobody has touched in years shows nobody
@@ -159,10 +159,11 @@ target customer it unlocks. Sharpen the gate with three checks:
 Write **hard disqualifiers** alongside the beachhead: segments that look adjacent but the product
 cannot serve, or that already self-serve the job. Test the buyer's actual access to the alternative,
 not its mere presence — a tool the customer cannot or dare not use (someone else holds the seat) is
-not an alternative they have. When two beachheads stay contested after the gate, split the
+no alternative. When two beachheads stay contested after the gate, split the
 [Discovery](discovery.md) Proof-of-Life probe evenly across them so the result compares segments
-rather than validating whichever one was tried first — and hold the offer and asset constant across
-the split, or an asset effect masquerades as segment fit.
+rather than validating the first one tried — and hold the offer and asset constant, or an asset
+effect masquerades as segment fit. At founder volume the split is directional, not a verdict; the
+small-numbers gate and the experiment design are `growth`'s.
 
 ## Validation
 
