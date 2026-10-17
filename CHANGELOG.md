@@ -7,8 +7,9 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 
 ## [Unreleased]
 
-### Added
-- Queue unreleased changes here.
+### Fixed
+- `surface-agentic` cost risk: no unlimited-agent promise until tail cost per user is measured,
+  and a bounded allowance offered instead, so the rule says what to sell as well as what not to.
 
 ## [0.3.0] — 2026-10-17
 
