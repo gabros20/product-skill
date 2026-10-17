@@ -2,8 +2,7 @@
 
 Purpose: Reshape discovery, PRD, risk, metrics, and strategy for a product whose core value comes
 from a model acting under uncertainty — not a deterministic feature wrapped around a model call.
-This is the differentiator overlay: nearly no PM discipline covers it; treat it as first-class, not
-an afterthought bolted onto a normal SaaS flow.
+Few PM disciplines cover it; treat it as first-class, not bolted onto a normal SaaS flow.
 
 Read when:
 - The request involves an LLM or agent doing the job itself — drafting, deciding, calling tools,
@@ -151,7 +150,12 @@ Route each to the risk register with the same rigor as a market or demand risk:
 - **p95 latency**, not average — the interaction model breaks on the tail; state the ceiling the UX
   tolerates before the job needs async, a progress state, or a smaller model.
 - **Cost per successful task**, not per call — a cheap call retried three times costs more than one
-  expensive call that succeeds; price the job, not the token.
+  expensive call that succeeds; price the job, not the token. Failed and abandoned attempts stay in
+  the numerator (all attempt spend ÷ accepted tasks); budget and price each workload class — chat,
+  research, code/browser, multi-agent — apart: Anthropic reports agents at ~4× and multi-agent
+  systems at ~15× a chat's tokens in its own data (vendor-reported, 2025 —
+  https://www.anthropic.com/engineering/multi-agent-research-system). No unlimited-agent promise
+  until tail cost is measured; one paid workflow before broader autonomy.
 - **Guardrail/policy needs** — what the agent must never do regardless of the ask (prompt-injection
   resistance, tool-allowlisting, output filtering) — required scope, not hardening polish.
 - **Degradation & fallback** — behavior when the model is unavailable or degraded: deterministic

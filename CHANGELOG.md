@@ -8,7 +8,12 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 ## [Unreleased]
 
 ### Added
-- Queue unreleased changes here.
+- **surface-agentic** §5 *Non-determinism, latency, cost, safety as product risks*: cost per
+  successful task sharpened — failed and abandoned attempts stay in the numerator (cost per accepted
+  task), each workload class (chat, research, code/browser, multi-agent) budgeted and priced apart
+  with Anthropic's vendor-reported token multiples as the reason, no unlimited-agent promise until
+  tail cost is measured, one paid workflow before broader autonomy. New output eval
+  `agentic-cost-per-accepted-task`.
 
 ## [0.2.0] — 2026-10-17
 

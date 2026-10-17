@@ -84,5 +84,15 @@
       "Sets an autonomy level with escalation triggers that include business-rule breaches (price off rule, margin below floor), not only model confidence",
       "Sources the task set from real historical/pilot cases first; any synthetic cases are labeled, fill coverage gaps only, and don't alone satisfy the release gate"
     ]
+  },
+  {
+    "id": "agentic-cost-per-accepted-task",
+    "prompt": "We want to launch our research agent on a flat $20/month unlimited plan. Is that a sound price?",
+    "assertions": [
+      "Prices on cost per accepted task, counting failed and abandoned attempts in the numerator, not per call or per token",
+      "Separates workload classes (chat, research, code/browser, multi-agent) with their own budget and price rather than one blended rate, and labels any token multiple as vendor-reported",
+      "Declines an unlimited-agent promise until tail cost per user is measured, offering a bounded allowance instead",
+      "Recommends proving one paid workflow before broadening autonomy"
+    ]
   }
 ]
