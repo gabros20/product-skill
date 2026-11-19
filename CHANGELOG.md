@@ -8,6 +8,11 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 ## [Unreleased]
 
 ### Added
+- Queue unreleased changes here.
+
+## [0.4.0] — 2026-11-19
+
+### Added
 - SKILL.md **Standalone context check** (before routing): the family's common core (look first,
   size it, ask at most four owner-only questions with recommended answers, decide as the expert,
   never block, record in the LEDGER) and five product questions (who has the problem, success as one
@@ -90,6 +95,7 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
   eval-as-acceptance-criteria — as the differentiator. 15 references, a `handoff.yaml` contract
   into `design`/`architecture`, and activation/traversal/output/compression evals.
 
+[0.4.0]: https://github.com/gabros20/product-skill/releases/tag/v0.4.0
 [0.3.1]: https://github.com/gabros20/product-skill/releases/tag/v0.3.1
 [0.3.0]: https://github.com/gabros20/product-skill/releases/tag/v0.3.0
 [0.2.0]: https://github.com/gabros20/product-skill/releases/tag/v0.2.0
