@@ -48,7 +48,7 @@ Before producing anything the user will have to live with:
    answers that would change it most.
 6. **Write it down.** Answers and assumptions go to the LEDGER's Context block.
 
-This pack's questions:
+This pack's questions (a pool — ask the top four that step 1 left open):
 1. Who has this problem today, and what do they do about it now? (If nobody can say yet, finding
    out comes first.)
 2. What would make this a success in three months, as one number? (Recommended: the count of
