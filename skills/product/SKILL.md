@@ -32,6 +32,38 @@ when upstream artifacts (research, founder brief, existing analytics) are suppli
 silently overriding established decisions. Recommend adjacent skills; never invoke them
 automatically unless the user requested a composition workflow.
 
+## Standalone context check
+
+Before producing anything the user will have to live with:
+1. **Look first.** Read `digital-product/LEDGER.md` (Context), `digital-product/<pack>/`, upstream
+   artifacts, the repo and this conversation. A fact found is never asked; a fact recorded is never
+   re-asked.
+2. **Size it.** Reversible and small → proceed, stating assumptions. New, costly or hard to undo →
+   check.
+3. **Ask only what the owner alone knows**, in their words: one round, at most four, highest
+   leverage first, each with a recommended answer ("ok" accepts all). Two rounds at most.
+4. **No or thin answers → decide as the expert.** Record each assumption with its basis and cost to
+   reverse; prefer the reversible option; show the cheapest proof early.
+5. **No way to ask → never block.** Proceed, and open the artifact with the assumptions and the
+   answers that would change it most.
+6. **Write it down.** Answers and assumptions go to the LEDGER's Context block.
+
+This pack's questions:
+1. Who has this problem today, and what do they do about it now? (If nobody can say yet, finding
+   out comes first.)
+2. What would make this a success in three months, as one number? (Recommended: the count of
+   people who complete the main action each week.)
+3. What do you already have as evidence: customer conversations, support tickets, sales notes,
+   usage data? (If none, start with the cheapest probe, not a spec.)
+4. What is fixed: deadline, budget, team size, platform? (Recommended: one small team, the smallest
+   version that tests the riskiest assumption.)
+5. What decision must this work settle: whether to build it, what to build first, or the exact spec?
+   (Recommended: whether to build it.)
+
+Discovery is this pack's own job, so a family run inherits these answers instead of re-asking
+them: they seed the outcome and the inward look in [Discovery](references/discovery.md)
+"Opportunity Solution Tree" and "MITRE Problem Framing Canvas".
+
 ## Route before acting
 
 1. Identify the **one primary job** the request needs.

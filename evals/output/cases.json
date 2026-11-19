@@ -94,5 +94,15 @@
       "Declines an unlimited-agent promise until tail cost per user is measured, offering a bounded allowance instead",
       "Recommends proving one paid workflow before broadening autonomy"
     ]
+  },
+  {
+    "id": "standalone-context-check",
+    "prompt": "I want to build an app for dog walkers. Write me a PRD.",
+    "assertions": [
+      "Before writing it reads any digital-product/LEDGER.md Context and the conversation, and asks nothing already answered there.",
+      "It asks at most four questions in one round, highest leverage first (who has the problem and what they do now, success as one number, evidence on hand, what is fixed), each with a recommended answer — or, if it cannot ask, proceeds and opens the PRD with the assumptions that would change it most.",
+      "With no evidence offered it recommends the cheapest discovery probe before a full spec, and tags unvalidated claims as Assumption rather than fact.",
+      "Answers and assumptions are recorded in the LEDGER's Context block, each assumption with its basis and cost to reverse."
+    ]
   }
 ]

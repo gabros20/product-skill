@@ -8,7 +8,12 @@ The release procedure synchronizes `.codex-plugin/plugin.json`, this changelog, 
 ## [Unreleased]
 
 ### Added
-- Queue unreleased changes here.
+- SKILL.md **Standalone context check** (before routing): the family's common core (look first,
+  size it, ask at most four owner-only questions with recommended answers, decide as the expert,
+  never block, record in the LEDGER) and five product questions (who has the problem, success as one
+  number, evidence on hand, what is fixed, which decision). They seed `discovery.md` "Opportunity
+  Solution Tree" and "MITRE Problem Framing Canvas"; a family run inherits them. Output eval
+  `standalone-context-check`.
 
 ## [0.3.1] — 2026-10-17
 
